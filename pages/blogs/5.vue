@@ -895,6 +895,27 @@ const highlightCode = (code, language) => {
             </div>
           </section>
 
+          <!-- 在 Project Timeline section 后添加 -->
+        <section>
+        <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-xl font-semibold mb-6">Community Engagement</h3>
+            <div class="space-y-4">
+            <div class="aspect-video relative">
+                <img 
+                src="/images/Alien/streaming.png"
+                alt="Streamer RheiaGaming playing Knock Knock Alien Is Here"
+                class="rounded-lg shadow-lg w-full h-full object-cover"
+                />
+            </div>
+            <p class="text-center text-gray-600 mt-2">
+                A Twitch streamer enjoying Knock Knock Alien Is Here during a live session
+            </p>
+            </div>
+        </div>
+        </section>
+
+
+
           <!-- Technical Challenges Section -->
           <section>
             <h3 class="text-xl font-semibold mb-6">Technical Challenges</h3>

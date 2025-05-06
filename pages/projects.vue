@@ -3,9 +3,20 @@ import polyspell_img from '@/public/images/PolySpell/triangle.png'
 import dungball_img from '@/public/images/DungBallDomination/mainmenu.png'
 import MCS_img from '@/public/images/MCS/MCS_003.gif'
 import Alien_img from '@/public/images/Alien/coverpage.png'
+import investor_img from '@/public/images/InnerInvestor/hero.jpg'
 
 const items = ref([
 {
+        title: "Inner Investor",
+        des: "A Behavioral Economics Game with Satirical Narrative",
+        tags: ['C#', 'Unity'],
+        imgUrl: investor_img,
+        intro: "Inner Investor is a satirical game where you trade with emotions like Fear and Greed—only to discover the hidden biases behind your decisions.",
+        aliveUrl: "https://play.unity.com/en/games/a0472e61-4ee9-45c1-a307-1ea9ac62a5e8/inner-investor",
+        SourceUrl: "https://github.com/WeizhengLiang/InnerInvestor",
+        id: 6,
+    },
+    {
         title: "Knock Knock Alien Is Here",
         des: "A fast-paced 2D game last 20 seconds",
         tags: ['C#', 'Unity'],
