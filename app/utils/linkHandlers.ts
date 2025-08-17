@@ -1,4 +1,4 @@
-export const copyOnlyIcons = ['i-simple-icons-gmail', 'i-simple-icons-wechat']
+export const copyOnlyIcons = ['i-simple-icons-gmail', 'i-el:phone']
 
 export const handleLinkClick = (link: any) => {
   // 对于WeChat和Email，只复制

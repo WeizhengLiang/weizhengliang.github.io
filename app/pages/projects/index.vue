@@ -32,15 +32,12 @@
 </script>
 
 <template>
-  <div
-v-if="page"
-class="min-h-screen"
->
+  <div v-if="page" class="min-h-screen">
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl lg:mx-0">
           <h1
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100"
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100"
           >
             {{ page.title }}
           </h1>
@@ -48,19 +45,13 @@ class="min-h-screen"
             {{ page.description }}
           </p>
           <div class="mt-6 flex items-center gap-x-6">
-            <div
-v-if="page.links"
-class="flex items-center gap-2"
->
+            <div v-if="page.links" class="flex items-center gap-2">
               <UButton
                 :label="page.links[0]?.label"
                 :to="global.meetingLink"
                 v-bind="page.links[0]"
               />
-              <UButton
-:to="`mailto:${global.email}`"
-v-bind="page.links[1]"
-/>
+              <UButton :to="`mailto:${global.email}`" v-bind="page.links[1]" />
             </div>
           </div>
         </div>
@@ -97,16 +88,49 @@ v-bind="page.links[1]"
                   <div class="text-gray-500 dark:text-gray-300 mb-4 text-sm">
                     {{ project.description }}
                   </div>
-                  <ULink
-                    :to="project.url"
-                    class="text-sm text-primary flex items-center"
-                  >
-                    View Project
-                    <UIcon
-                      name="i-lucide-arrow-right"
-                      class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-                    />
-                  </ULink>
+
+                  <div class="flex justify-between">
+                    <ULink
+                      :to="project.url"
+                      class="text-sm text-primary flex items-center"
+                    >
+                      View Project
+                      <UIcon
+                        name="i-lucide-arrow-right"
+                        class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                      />
+                    </ULink>
+
+                    <div class="flex items-center gap-2">
+                      <a
+                        v-if="(project as any).code"
+                        :href="(project as any).code"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm flex items-center"
+                      >
+                        Source Code
+                        <UIcon
+                          name="i-lucide-arrow-right"
+                          class="size-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                        />
+                      </a>
+
+                      <a
+                        v-if="(project as any).alive"
+                        :href="(project as any).alive"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm flex items-center"
+                      >
+                        See Alive
+                        <UIcon
+                          name="i-lucide-arrow-right"
+                          class="size-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                        />
+                      </a>
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="order-1 lg:order-1"
@@ -116,7 +140,7 @@ v-bind="page.links[1]"
                     :src="project.image"
                     :alt="project.title"
                     class="object-cover w-full h-48 rounded-lg shadow-lg"
-                  >
+                  />
                 </div>
               </div>
             </div>

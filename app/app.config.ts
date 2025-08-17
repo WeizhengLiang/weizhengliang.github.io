@@ -1,12 +1,12 @@
 export default defineAppConfig({
   global: {
-          picture: {
-        dark: '/img/yutong.jpg',
-        light: '/img/yutong.jpg',
+    picture: {
+      dark: '/img/profile.png',
+      light: '/img/profile.png',
       alt: 'My profile picture'
     },
     meetingLink: 'https://cal.com/',
-    email: 'hanyutong19951123@gmail.com',
+    email: 'weizhengliang@gmail.com',
     available: true
   },
   ui: {
@@ -32,26 +32,26 @@ export default defineAppConfig({
       {
         icon: 'i-simple-icons-gmail',
         to: '',
-        account: 'hanyutong19951123@gmail.com',
+        account: 'weizhengliang@gmail.com',
         target: '_blank',
         'aria-label': 'Gmail address'
       },
       {
         icon: 'i-el:linkedin',
-        to: 'https://www.linkedin.com/in/yutonghan1123',
+        to: 'https://www.linkedin.com/in/weizhengliang/',
         target: '_blank',
         'aria-label': 'Linkedin address'
       },
       {
-        icon: 'i-simple-icons-wechat',
+        icon: 'i-el:phone',
         to: '',
-        account: 'hanyutong19951123',
+        account: '305-505-8689',
         target: '',
-        'aria-label': 'WeChat ID'
+        'aria-label': 'Phone Number'
       },
       {
         icon: 'i-simple-icons-github',
-        to: 'https://github.com/yutonghan19951123',
+        to: 'https://github.com/weizhengliang',
         target: '_blank',
         'aria-label': 'GitHub address'
       }

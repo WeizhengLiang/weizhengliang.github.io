@@ -34,7 +34,7 @@
               :alt="global.picture?.alt"
               class="size-22 ring ring-default ring-offset-3 ring-offset-(--ui-bg) rounded-full"
               style="object-fit: cover"
-            >
+            />
           </Motion>
         </div>
 
@@ -55,7 +55,7 @@
           }"
         >
           <div
-            class="text-shadow-md max-w-lg mx-auto text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100"
+            class="text-shadow-md max-w-2xl mx-auto text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100"
           >
             {{ page.title }}
           </div>
@@ -163,7 +163,7 @@
                 : 'rotate-3'
             "
             v-bind="img"
-          >
+          />
         </Motion>
       </div>
     </div>

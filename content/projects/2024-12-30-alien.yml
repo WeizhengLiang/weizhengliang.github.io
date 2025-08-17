@@ -1,0 +1,8 @@
+title: Knock Knock Alien Is Here
+description: Step into the shoes of an unlucky scientist who finds himself on the run from an alien death warrant! In this fast-paced 2D game, you have just 20 seconds to barricade your door and save your life.
+image: /img/alien.png
+url: '/blog/2024-12-30-alien'
+code: 'https://github.com/WeizhengLiang/Knock-Knock-Alien-is-Here'
+alive: 'https://bestdtang.itch.io/knock-knock-alien-is-here'
+tags: ['C+', 'Unity']
+date: '2024-12'

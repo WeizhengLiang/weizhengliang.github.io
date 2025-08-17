@@ -1,0 +1,8 @@
+title: Melee Combat System
+description: A Unity-based combat framework that demonstrates core mechanics of modern action games, featuring combo systems, weapon switching, and animation-driven gameplay.
+image: /img/combat.gif
+url: '/blog/2024-11-12-combat'
+code: 'https://github.com/WeizhengLiang/melee-combat-system/tree/main'
+alive: 'https://github.com/WeizhengLiang/melee-combat-system/releases/tag/v0.1'
+tags: ['C+', 'Unity']
+date: '2024-11'

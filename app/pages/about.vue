@@ -24,34 +24,22 @@
 
   const items = ref<TimelineItem[]>([
     {
-      date: 'June, 2017',
-      title: 'China University of Political Science and Law',
-      description: `Bachelor's in Applied Psychology`,
+      date: 'January, 2024',
+      title: 'Rutgers University ‑ New Brunswick ',
+      description: `Bachelor's in Computer Science`,
       icon: 'i-lucide-book-open-text'
     },
     {
-      date: 'December, 2020',
-      title: 'University of Miami ',
-      description: `Master's in Interactive Media Master`,
+      date: 'February, 2024',
+      title: 'Shanghai Zhanxun Network Technology',
+      description: 'Software Engineer Intern',
+      icon: 'i-lucide-gamepad-2'
+    },
+    {
+      date: 'Expected Graduation: May 2027',
+      title: 'University of Southern California',
+      description: `Master's in Computer Science - Game Development (CSGD)`,
       icon: 'i-lucide-graduation-cap'
-    },
-    {
-      date: 'September, 2022',
-      title: 'Caixin Media Company Ltd.',
-      description: 'Data Journalist',
-      icon: 'i-lucide-newspaper'
-    },
-    {
-      date: 'July, 2025',
-      title: 'Tranalytic Technology Co., Ltd.',
-      description: `Front-End & Data Visualization Engineer`,
-      icon: 'i-lucide-braces'
-    },
-    {
-      date: 'July, 2027',
-      title: 'Georgia Institute of Technology',
-      description: 'Online Master of Science in Computer Science',
-      icon: 'i-lucide-binary'
     }
   ])
 
@@ -63,10 +51,7 @@
 </script>
 
 <template>
-  <div
-v-if="page"
-class="min-h-screen"
->
+  <div v-if="page" class="min-h-screen">
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-12">
         <div
@@ -92,10 +77,7 @@ class="min-h-screen"
                 class="inline-flex items-center gap-2"
                 @click="openResume"
               >
-                <UIcon
-name="i-lucide-file-text"
-class="w-5 h-5"
-/>
+                <UIcon name="i-lucide-file-text" class="w-5 h-5" />
                 View Resume
               </UButton>
             </div>
@@ -107,7 +89,7 @@ class="w-5 h-5"
               :src="global.picture?.light"
               :alt="global.picture?.alt"
               class="sm:rotate-4 size-28 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-            >
+            />
           </div>
         </div>
       </div>
@@ -119,7 +101,7 @@ class="w-5 h-5"
         <div class="flex justify-center">
           <UTimeline
             color="neutral"
-            :default-value="3"
+            :default-value="1"
             :items="items"
             class="w-96 translate-x-[calc(50%-1rem)]"
             :ui="{
@@ -129,10 +111,7 @@ class="w-5 h-5"
         </div>
 
         <div class="mt-12 max-w-3xl mx-auto prose prose-gray dark:prose-invert">
-          <MDC
-:value="page.content"
-class="blog-content"
-/>
+          <MDC :value="page.content" class="blog-content" />
         </div>
 
         <div

@@ -29,15 +29,12 @@
 </script>
 
 <template>
-  <div
-v-if="page"
-class="min-h-screen"
->
+  <div v-if="page" class="min-h-screen">
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h1
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100"
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100"
           >
             {{ page.title }}
           </h1>
@@ -45,10 +42,7 @@ class="min-h-screen"
             {{ page.description }}
           </p>
           <div class="mt-6 flex items-center gap-x-6">
-            <div
-v-if="page.links"
-class="flex items-center gap-2"
->
+            <div v-if="page.links" class="flex items-center gap-2">
               <UButton v-bind="page.links[0]" />
             </div>
           </div>
@@ -81,7 +75,7 @@ class="flex items-center gap-2"
                           ? 'rotate-1'
                           : 'rotate-2'
                     "
-                  >
+                  />
                 </div>
                 <div class="order-2">
                   <div class="flex items-center gap-2 mb-2">

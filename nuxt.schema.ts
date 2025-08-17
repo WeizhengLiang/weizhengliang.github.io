@@ -38,14 +38,14 @@ export default defineNuxtSchema({
               title: 'Dark mode',
               description: 'Your profile picture in dark mode.',
               icon: 'lucide:moon',
-              default: '/app/assets/img/yutong.png'
+              default: '/app/assets/img/profile.png'
             }),
             light: field({
               type: 'string',
               title: 'Light mode',
               description: 'Your profile picture in light mode.',
               icon: 'lucide:sun',
-              default: '/app/assets/img/yutong.png'
+              default: '/app/assets/img/profile.png'
             }),
             alt: field({
               type: 'string',
@@ -74,7 +74,25 @@ export default defineNuxtSchema({
               description: 'Primary color of your UI.',
               icon: 'i-mdi-palette-outline',
               default: 'green',
-              required: ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
+              required: [
+                'red',
+                'orange',
+                'amber',
+                'yellow',
+                'lime',
+                'green',
+                'emerald',
+                'teal',
+                'cyan',
+                'sky',
+                'blue',
+                'indigo',
+                'violet',
+                'purple',
+                'fuchsia',
+                'pink',
+                'rose'
+              ]
             }),
             neutral: field({
               type: 'string',
@@ -145,7 +163,8 @@ export default defineNuxtSchema({
         siteName: field({
           type: 'string',
           title: 'Site Name',
-          description: 'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
+          description:
+            'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
           icon: 'i-mdi-web',
           default: []
         })

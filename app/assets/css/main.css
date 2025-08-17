@@ -163,6 +163,14 @@
   @apply hover:shadow-xl hover:scale-[1.02];
 }
 
+/* 超小尺寸图片样式 */
+.blog-img-xs {
+  @apply w-full h-auto max-w-[250px] mx-auto;
+  @apply rounded-lg shadow-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-xl hover:scale-[1.02];
+}
+
 /* GIF图片特殊样式 - 避免hover效果影响动画 */
 .blog-img-gif {
   @apply w-full h-auto max-w-[640px] mx-auto;
@@ -266,4 +274,217 @@
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* 评分卡片通用样式 */
+.score-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer;
+}
+
+.score-icon {
+  @apply w-8 h-8 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto;
+}
+
+.score-title {
+  @apply font-semibold text-gray-900 dark:text-white text-base my-2;
+}
+
+.score-value {
+  @apply text-sm font-light text-gray-500 dark:text-gray-400;
+}
+
+.score-card-content {
+  @apply text-center h-full flex flex-col justify-between;
+}
+
+.score-card-header {
+  @apply flex flex-col items-center;
+}
+
+.score-icon-text {
+  @apply text-sm font-bold text-gray-600 dark:text-gray-300;
+}
+
+/* Timeline 样式 - 简化版本，避免复杂的 HTML 结构 */
+.timeline-simple {
+  @apply space-y-8 my-8 relative;
+}
+
+.timeline-simple::before {
+  content: '';
+  @apply absolute left-6 top-0 w-0.5 bg-gray-200 dark:bg-gray-700;
+  height: calc(100% - 8rem);
+}
+
+.timeline-step {
+  @apply relative;
+}
+
+.timeline-step-header {
+  @apply flex items-center gap-4;
+}
+
+.timeline-step-icon {
+  @apply w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-xl shadow-lg;
+  @apply border-4 border-white dark:border-gray-800;
+}
+
+.timeline-step-date {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.timeline-step-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white mb-2 ml-16;
+}
+
+.timeline-step-desc {
+  @apply text-gray-600 dark:text-gray-300 leading-relaxed ml-16;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .timeline-simple::before {
+    @apply left-6;
+  }
+
+  .timeline-step-icon {
+    @apply w-10 h-10 text-lg;
+  }
+
+  .timeline-step-title {
+    @apply ml-14;
+  }
+
+  .timeline-step-desc {
+    @apply ml-14;
+  }
+}
+
+/* 工具和会议信息卡片样式 */
+.tools-meetings-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 my-8;
+}
+
+.info-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700;
+  @apply hover:shadow-xl transition-all duration-300;
+}
+
+.info-card-title {
+  @apply text-lg font-bold text-gray-900 dark:text-white mb-4 text-center;
+}
+
+.info-card-content {
+  @apply space-y-4;
+}
+
+.info-item {
+  @apply flex justify-between items-center;
+}
+
+.info-label {
+  @apply font-semibold text-gray-900 dark:text-white;
+}
+
+.info-value {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+/* 学习成果卡片样式 */
+.learning-outcomes-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8;
+}
+
+.learning-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700;
+  @apply hover:shadow-xl transition-all duration-300 hover:scale-[1.02];
+}
+
+.learning-card-title {
+  @apply text-base font-bold text-gray-900 dark:text-white mb-4 text-left;
+}
+
+.learning-list {
+  @apply space-y-3;
+}
+
+.learning-list li {
+  @apply text-sm text-gray-600 dark:text-gray-300 leading-relaxed;
+  @apply list-none relative pl-4;
+}
+
+.learning-list li::before {
+  content: '';
+  @apply absolute left-0 top-2 w-2 h-2 rounded-full bg-green-100 dark:bg-green-900;
+  @apply flex items-center justify-center;
+  @apply border-2 border-green-300 dark:border-green-700;
+}
+
+.learning-list li::after {
+  content: '';
+  @apply absolute left-1 top-2 w-1.5 h-1.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 团队成员展示样式 */
+.team-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8;
+}
+
+.team-member {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700;
+  @apply hover:shadow-xl transition-all duration-300 hover:scale-[1.02];
+}
+
+.team-avatar {
+  @apply flex justify-center mb-4;
+}
+
+.team-avatar-img {
+  @apply w-20 h-20 rounded-full object-cover border-4 border-gray-200 dark:border-gray-600;
+  @apply shadow-lg;
+}
+
+.team-avatar-placeholder {
+  @apply w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center;
+  @apply border-4 border-gray-200 dark:border-gray-600 text-gray-400 dark:text-gray-500;
+}
+
+.team-info {
+  @apply text-center;
+}
+
+.team-name {
+  @apply text-lg font-bold text-gray-900 dark:text-white mb-1;
+}
+
+.team-role {
+  @apply text-sm text-primary-600 dark:text-primary-400 font-medium mb-3;
+}
+
+.team-skills {
+  @apply text-left space-y-1;
+}
+
+.team-skills li {
+  @apply text-sm text-gray-600 dark:text-gray-300;
+  @apply list-none before:content-['•'] before:text-primary-500 before:mr-2;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .team-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .team-member {
+    @apply p-4;
+  }
+
+  .team-avatar-img,
+  .team-avatar-placeholder {
+    @apply w-16 h-16;
+  }
 }

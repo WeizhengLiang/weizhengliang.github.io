@@ -1,59 +1,50 @@
 seo:
-  title: 'Yutong Han - Designer & Developer'
+  title: 'Weizheng Liang - Designer & Developer'
   description: "Welcome to my portfolio! I'm Yutong Han, a UX/UI designer and front-end developer. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Yutong Han Designer & Developer"
-description: 'I enjoy telling a data-driven story through visualization. Loves data-viz, creative design, and end-to-end development.'
+title: "Hey, I'm Weizheng Liang software engineer (game dev)"
+description: 'passionate about creating gameplay systems, tools, and experiences that put players first.'
 hero:
   links:
     - label: 'Get in Touch'
       to: /about#contact
       color: 'neutral'
   images:
-    - src: /img/edge_speed.png
-      alt: edge speed
-    - src: /img/heatmap.jpg
-      alt: heatmap
-    - src: /img/smart_intersection.png
-      alt: smart intersection
-    - src: /img/snow.png
-      alt: snow sport
-    - src: /img/traffic_light_game.png
-      alt: traffic light game
-    - src: /img/winter_olympic.gif
+    - src: /img/investor.png
+      alt: Inner Investor
+    - src: /img/alien.png
+      alt: Knock Knock Alien
+    - src: /img/coverage.gif
+      alt: Dungball Domination
+    - src: /img/combat.gif
+      alt: Melee Combat System
+    - src: /img/neon.gif
       alt: winter olympic
-    - src: /img/from_ancient_cover.png
-      alt: blue jeans
-    - src: /img/clarify.png
-      alt: wastewater
-    - src: /img/invest_game.gif
-      alt: invest game
 about:
   title: 'About Me'
   description: |
-    As a self-taught UX/UI designer and front-end engineer, I specialize in creating user-centered, maintainable digital products that merge design with technology.
-    I love data visualization and excel at turning abstract needs into purposeful, functional solutions.
+    I’m Weizheng Liang — a game developer and software engineer passionate about creating gameplay systems, tools, and experiences that put players first.
+
+    I’ve worked as a gameplay programmer at studios like Shanghai Zhanxun Network Technology and Bilin Planet.
 experience:
   title: Work Experience
   items:
-    - position: 'Front-end engineer at'
-      date: '2022 - 2025'
+    - position: 'Software engineer intern at'
+      date: '2024'
       company:
-        name: Merit
-        logo: '/img/company/merit.svg'
-        url: 'https://www.ge.cn'
+        name: Zhanxun Co., Ltd
+        url: ''
         color: '#00a0e9'
-    - position: 'Data journist at'
-      date: '2021 - 2022'
+    - position: 'Software engineer intern at'
+      date: '2023'
       company:
-        name: Caixin
-        logo: '/img/company/caixin.png'
-        url: 'https://www.caixin.com'
+        name: Bilin Planet Co., Ltd
+        url: ''
         color: '#1f286f'
-    - position: 'Front-end engineer at'
-      date: '2019 - 2020'
+    - position: 'Test automation engineer intern at'
+      date: '2022'
       company:
-        name: Markham
-        url: 'https://linear.app'
+        name: AwesomeGo
+        url: ''
         color: '#5E6AD2'
 # testimonials:
 #   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
