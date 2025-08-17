@@ -1,4 +1,4 @@
-# Yutong Han's Portfolio
+# Weizheng Liang's Portfolio
 
 A modern, responsive portfolio website built with Nuxt 3, showcasing design and development work.
 
@@ -34,7 +34,7 @@ npm run generate
 
 ## 🌐 Deployment
 
-This site is automatically deployed to GitHub Pages via GitHub Actions. The site is available at: https://yutong-han.github.io
+This site is automatically deployed to GitHub Pages via GitHub Actions.
 
 ## 📁 Project Structure
 
