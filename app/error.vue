@@ -28,7 +28,9 @@
       <UContainer>
         <div class="py-16 text-center">
           <div class="max-w-md mx-auto">
-            <div class="text-6xl mb-4">😵</div>
+            <div class="text-6xl mb-4">
+              😵
+            </div>
             <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               {{
                 error.statusCode === 404
@@ -43,7 +45,12 @@
                   : 'We encountered an unexpected error. Please try again later.'
               }}
             </p>
-            <UButton to="/" color="primary"> Go Home </UButton>
+            <UButton 
+              to="/" 
+              color="primary"
+            > 
+              Go Home 
+            </UButton>
           </div>
         </div>
       </UContainer>
