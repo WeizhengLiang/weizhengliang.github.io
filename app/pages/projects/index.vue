@@ -72,8 +72,8 @@
             <div class="group mb-16 pb-16 last:mb-0">
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div
-                  class="order-2 lg:order-2"
                   :class="{ 'lg:order-1': index % 2 === 0 }"
+                  class="order-2 lg:order-2"
                 >
                   <div class="flex items-center gap-2 mb-2">
                     <span class="text-sm text-muted">
@@ -133,14 +133,14 @@
                   </div>
                 </div>
                 <div
-                  class="order-1 lg:order-1"
                   :class="{ 'lg:order-2': index % 2 === 0 }"
+                  class="order-1 lg:order-1"
                 >
                   <img
                     :src="project.image"
                     :alt="project.title"
                     class="object-cover w-full h-48 rounded-lg shadow-lg"
-                  />
+                  >
                 </div>
               </div>
             </div>
