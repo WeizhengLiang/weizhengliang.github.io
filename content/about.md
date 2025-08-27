@@ -1,0 +1,35 @@
+---
+title: About Me
+description: Hey, I'm Weizheng Liang — a game developer and software engineer passionate about creating gameplay systems, tools, and experiences that put players first.
+images:
+  - src: /img/cat.jpg
+    alt: Cat, wife, me
+  - src: /img/wedding.jpg
+    alt: My wedding
+---
+
+### Who I Am
+
+I'm Weizheng Liang — a game developer and software engineer passionate about creating gameplay systems, tools, and experiences that put players first.
+
+### Technical & Creative Background
+
+I bring a unique blend of software engineering rigor and player-focused design. With a Master's in Computer Science – Game Development from USC (in progress) and a Bachelor's in Computer Science from Rutgers, I've built projects ranging from data-driven combat frameworks to physics-based gameplay systems, always prioritizing performance, clarity, and player joy.
+
+### Professional Experience
+
+Professionally, I've worked as a gameplay programmer at studios like Shanghai Zhanxun Network Technology and Bilin Planet, implementing complex systems in Unity (C#), optimizing algorithms for FPS stability, and collaborating with cross-disciplinary teams to deliver polished, player-ready features.
+
+### Design Philosophy
+
+Inspired by Riot Games' commitment to player advocacy and community-driven development, I aim to build experiences that respect players' time, celebrate their skill, and surprise them in meaningful ways. My work combines technical problem-solving — from spatial partitioning optimizations to editor tooling — with iterative playtesting and feedback-driven design.
+
+### What I'm Doing
+
+I'm currently building a TFT-like, data-driven rotating mode auto chess sandbox using Unreal Engine and C++. This project focuses on modular gameplay systems, highly customizable rulesets, and flexible content pipelines — giving designers the freedom to create and players to experiment with unique game modes.
+
+### Beyond Development
+
+When I'm not coding or prototyping, you'll find me playtesting indie titles, exploring new rendering or AI techniques, or studying how game systems can shape player behavior for the better.
+
+Thanks for stopping by. Feel free to browse my [projects](/projects) or [get in touch](/about#contact) if you'd like to collaborate!

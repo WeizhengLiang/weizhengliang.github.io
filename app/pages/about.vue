@@ -5,6 +5,13 @@
   const { data: page } = await useAsyncData('about', () => {
     return queryCollection('about').first()
   })
+  
+  // Debug: Log the page data to see what's being loaded
+  console.log('About page data:', page.value)
+  console.log('Page content:', page.value?.content)
+  console.log('Page title:', page.value?.title)
+  console.log('Page description:', page.value?.description)
+  
   if (!page.value) {
     throw createError({
       statusCode: 404,
@@ -111,7 +118,7 @@
         </div>
 
         <div class="mt-12 max-w-3xl mx-auto prose prose-gray dark:prose-invert">
-          <MDC :value="page.content" class="blog-content" />
+          <ContentRenderer :value="page" class="blog-content" />
         </div>
 
         <div

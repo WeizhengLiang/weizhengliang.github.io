@@ -4,10 +4,18 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/content',
+    '@nuxtjs/mdc',
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
+
+  // MDC configuration
+  mdc: {
+    highlight: {
+      theme: 'github-dark'
+    }
+  },
 
   // Static site generation for GitHub Pages
   ssr: false,

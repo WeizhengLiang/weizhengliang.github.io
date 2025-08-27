@@ -136,9 +136,10 @@ export default defineContentConfig({
     }),
     about: defineCollection({
       type: 'page',
-      source: 'about.yml',
+      source: 'about.md',
       schema: z.object({
-        content: z.object({}),
+        title: z.string(),
+        description: z.string(),
         images: z.array(createImageSchema())
       })
     })
