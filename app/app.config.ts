@@ -6,7 +6,7 @@ export default defineAppConfig({
       alt: 'My profile picture'
     },
     meetingLink: 'https://cal.com/',
-    email: 'weizhengliang@gmail.com',
+    email: 'lwz.employ@gmail.com',
     available: true
   },
   ui: {
@@ -32,7 +32,7 @@ export default defineAppConfig({
       {
         icon: 'i-simple-icons-gmail',
         to: '',
-        account: 'weizhengliang@gmail.com',
+        account: 'lwz.employ@gmail.com',
         target: '_blank',
         'aria-label': 'Gmail address'
       },

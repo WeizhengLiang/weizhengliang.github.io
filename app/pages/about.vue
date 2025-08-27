@@ -46,7 +46,7 @@
   const { footer } = useAppConfig()
 
   const openResume = () => {
-    window.open('/file/resume.pdf', '_blank')
+    window.open('/file/Weizheng_Liang_Resume_GameStudio_2025.pdf', '_blank')
   }
 </script>
 
