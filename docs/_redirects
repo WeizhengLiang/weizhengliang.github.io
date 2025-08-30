@@ -1,6 +1,0 @@
-# Netlify redirects file
-# Handle SPA routing - fallback to index.html for all routes that don't exist
-/*    /index.html   200
-
-# Handle blog post routing specifically
-/blog/*  /blog/:splat/index.html  200

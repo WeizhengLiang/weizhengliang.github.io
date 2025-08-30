@@ -3,8 +3,11 @@
 
   const route = useRoute()
 
+  // Normalize the path to handle both with and without trailing slash
+  const normalizedPath = route.path.endsWith('/') ? route.path : route.path + '/'
+  
   const { data: page } = await useAsyncData(route.path, () =>
-    queryCollection('blog').path(route.path).first()
+    queryCollection('blog').path(normalizedPath).first()
   )
   if (!page.value)
     throw createError({
@@ -13,7 +16,7 @@
       fatal: true
     })
   const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-    queryCollectionItemSurroundings('blog', route.path, {
+    queryCollectionItemSurroundings('blog', normalizedPath, {
       fields: ['description']
     })
   )
