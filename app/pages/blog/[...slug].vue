@@ -4,7 +4,8 @@
   const route = useRoute()
 
   // Normalize the path to handle both with and without trailing slash
-  const normalizedPath = route.path.endsWith('/') ? route.path : route.path + '/'
+  // Remove trailing slash for content queries since our content paths don't have them
+  const normalizedPath = route.path.endsWith('/') ? route.path.slice(0, -1) : route.path
   
   const { data: page } = await useAsyncData(route.path, () =>
     queryCollection('blog').path(normalizedPath).first()
