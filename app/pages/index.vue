@@ -3,7 +3,7 @@
     return queryCollection('index').first()
   })
   if (!page.value) {
-    throw createError({
+    throw createError({ 
       statusCode: 404,
       statusMessage: 'Page not found',
       fatal: true
