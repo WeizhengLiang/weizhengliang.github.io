@@ -48,7 +48,12 @@ export default defineNuxtConfig({
       crawlLinks: true,
       ignore: [
         '/api/**'
-      ]
+      ],
+      failOnError: false
+    },
+    // Generate proper file structure for static hosting
+    output: {
+      publicDir: 'docs'
     }
   },
 
