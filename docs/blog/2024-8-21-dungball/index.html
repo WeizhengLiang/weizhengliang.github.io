@@ -1,0 +1,265 @@
+<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="nuxt-ui-colors">@layer base {
+  :root {
+  --ui-color-primary-50: var(--color-blue-50, oklch(97% 0.014 254.604));
+  --ui-color-primary-100: var(--color-blue-100, oklch(93.2% 0.032 255.585));
+  --ui-color-primary-200: var(--color-blue-200, oklch(88.2% 0.059 254.128));
+  --ui-color-primary-300: var(--color-blue-300, oklch(80.9% 0.105 251.813));
+  --ui-color-primary-400: var(--color-blue-400, oklch(70.7% 0.165 254.624));
+  --ui-color-primary-500: var(--color-blue-500, oklch(62.3% 0.214 259.815));
+  --ui-color-primary-600: var(--color-blue-600, oklch(54.6% 0.245 262.881));
+  --ui-color-primary-700: var(--color-blue-700, oklch(48.8% 0.243 264.376));
+  --ui-color-primary-800: var(--color-blue-800, oklch(42.4% 0.199 265.638));
+  --ui-color-primary-900: var(--color-blue-900, oklch(37.9% 0.146 265.522));
+  --ui-color-primary-950: var(--color-blue-950, oklch(28.2% 0.091 267.935));
+  --ui-color-secondary-50: var(--color-blue-50, oklch(97% 0.014 254.604));
+  --ui-color-secondary-100: var(--color-blue-100, oklch(93.2% 0.032 255.585));
+  --ui-color-secondary-200: var(--color-blue-200, oklch(88.2% 0.059 254.128));
+  --ui-color-secondary-300: var(--color-blue-300, oklch(80.9% 0.105 251.813));
+  --ui-color-secondary-400: var(--color-blue-400, oklch(70.7% 0.165 254.624));
+  --ui-color-secondary-500: var(--color-blue-500, oklch(62.3% 0.214 259.815));
+  --ui-color-secondary-600: var(--color-blue-600, oklch(54.6% 0.245 262.881));
+  --ui-color-secondary-700: var(--color-blue-700, oklch(48.8% 0.243 264.376));
+  --ui-color-secondary-800: var(--color-blue-800, oklch(42.4% 0.199 265.638));
+  --ui-color-secondary-900: var(--color-blue-900, oklch(37.9% 0.146 265.522));
+  --ui-color-secondary-950: var(--color-blue-950, oklch(28.2% 0.091 267.935));
+  --ui-color-success-50: var(--color-green-50, oklch(98.2% 0.018 155.826));
+  --ui-color-success-100: var(--color-green-100, oklch(96.2% 0.044 156.743));
+  --ui-color-success-200: var(--color-green-200, oklch(92.5% 0.084 155.995));
+  --ui-color-success-300: var(--color-green-300, oklch(87.1% 0.15 154.449));
+  --ui-color-success-400: var(--color-green-400, oklch(79.2% 0.209 151.711));
+  --ui-color-success-500: var(--color-green-500, oklch(72.3% 0.219 149.579));
+  --ui-color-success-600: var(--color-green-600, oklch(62.7% 0.194 149.214));
+  --ui-color-success-700: var(--color-green-700, oklch(52.7% 0.154 150.069));
+  --ui-color-success-800: var(--color-green-800, oklch(44.8% 0.119 151.328));
+  --ui-color-success-900: var(--color-green-900, oklch(39.3% 0.095 152.535));
+  --ui-color-success-950: var(--color-green-950, oklch(26.6% 0.065 152.934));
+  --ui-color-info-50: var(--color-blue-50, oklch(97% 0.014 254.604));
+  --ui-color-info-100: var(--color-blue-100, oklch(93.2% 0.032 255.585));
+  --ui-color-info-200: var(--color-blue-200, oklch(88.2% 0.059 254.128));
+  --ui-color-info-300: var(--color-blue-300, oklch(80.9% 0.105 251.813));
+  --ui-color-info-400: var(--color-blue-400, oklch(70.7% 0.165 254.624));
+  --ui-color-info-500: var(--color-blue-500, oklch(62.3% 0.214 259.815));
+  --ui-color-info-600: var(--color-blue-600, oklch(54.6% 0.245 262.881));
+  --ui-color-info-700: var(--color-blue-700, oklch(48.8% 0.243 264.376));
+  --ui-color-info-800: var(--color-blue-800, oklch(42.4% 0.199 265.638));
+  --ui-color-info-900: var(--color-blue-900, oklch(37.9% 0.146 265.522));
+  --ui-color-info-950: var(--color-blue-950, oklch(28.2% 0.091 267.935));
+  --ui-color-warning-50: var(--color-yellow-50, oklch(98.7% 0.026 102.212));
+  --ui-color-warning-100: var(--color-yellow-100, oklch(97.3% 0.071 103.193));
+  --ui-color-warning-200: var(--color-yellow-200, oklch(94.5% 0.129 101.54));
+  --ui-color-warning-300: var(--color-yellow-300, oklch(90.5% 0.182 98.111));
+  --ui-color-warning-400: var(--color-yellow-400, oklch(85.2% 0.199 91.936));
+  --ui-color-warning-500: var(--color-yellow-500, oklch(79.5% 0.184 86.047));
+  --ui-color-warning-600: var(--color-yellow-600, oklch(68.1% 0.162 75.834));
+  --ui-color-warning-700: var(--color-yellow-700, oklch(55.4% 0.135 66.442));
+  --ui-color-warning-800: var(--color-yellow-800, oklch(47.6% 0.114 61.907));
+  --ui-color-warning-900: var(--color-yellow-900, oklch(42.1% 0.095 57.708));
+  --ui-color-warning-950: var(--color-yellow-950, oklch(28.6% 0.066 53.813));
+  --ui-color-error-50: var(--color-red-50, oklch(97.1% 0.013 17.38));
+  --ui-color-error-100: var(--color-red-100, oklch(93.6% 0.032 17.717));
+  --ui-color-error-200: var(--color-red-200, oklch(88.5% 0.062 18.334));
+  --ui-color-error-300: var(--color-red-300, oklch(80.8% 0.114 19.571));
+  --ui-color-error-400: var(--color-red-400, oklch(70.4% 0.191 22.216));
+  --ui-color-error-500: var(--color-red-500, oklch(63.7% 0.237 25.331));
+  --ui-color-error-600: var(--color-red-600, oklch(57.7% 0.245 27.325));
+  --ui-color-error-700: var(--color-red-700, oklch(50.5% 0.213 27.518));
+  --ui-color-error-800: var(--color-red-800, oklch(44.4% 0.177 26.899));
+  --ui-color-error-900: var(--color-red-900, oklch(39.6% 0.141 25.723));
+  --ui-color-error-950: var(--color-red-950, oklch(25.8% 0.092 26.042));
+  --ui-color-neutral-50: var(--color-old-neutral-50, oklch(98.5% 0 0));
+  --ui-color-neutral-100: var(--color-old-neutral-100, oklch(97% 0 0));
+  --ui-color-neutral-200: var(--color-old-neutral-200, oklch(92.2% 0 0));
+  --ui-color-neutral-300: var(--color-old-neutral-300, oklch(87% 0 0));
+  --ui-color-neutral-400: var(--color-old-neutral-400, oklch(70.8% 0 0));
+  --ui-color-neutral-500: var(--color-old-neutral-500, oklch(55.6% 0 0));
+  --ui-color-neutral-600: var(--color-old-neutral-600, oklch(43.9% 0 0));
+  --ui-color-neutral-700: var(--color-old-neutral-700, oklch(37.1% 0 0));
+  --ui-color-neutral-800: var(--color-old-neutral-800, oklch(26.9% 0 0));
+  --ui-color-neutral-900: var(--color-old-neutral-900, oklch(20.5% 0 0));
+  --ui-color-neutral-950: var(--color-old-neutral-950, oklch(14.5% 0 0));
+  }
+  :root, .light {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+  }
+  .dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+  }
+}</style><title>Dungball Domination - A Game Jam Adventure - Nuxt Portfolio Template</title><style>::view-transition-new(root),::view-transition-old(root){animation:none;mix-blend-mode:normal}::view-transition-new(root){z-index:9999}::view-transition-old(root){z-index:1}</style><style>pre code .line{display:block}</style><link rel="stylesheet" href="/_nuxt/entry.NcOlk78X.css" crossorigin><style>@layer components {:where(.i-el\:linkedin){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200' width='1200' height='1200'%3E%3Cpath fill='black' d='M0 0v1200h1200V0zm294.287 235.913c47.53.535 94.35 33.325 96.387 90.088c1.016 50.475-42.971 88.921-97.632 90.088h-1.318c-47.057-.543-93.012-34.156-95.142-90.088c.671-49.913 42.627-88.904 97.705-90.088M804.199 474.39c52.255.324 101.572 15.826 142.09 57.13c42.106 46.96 55.624 111.71 57.129 177.538v299.414H830.859V729.419c-.384-52.302-18.3-115.877-87.524-117.993c-40.571.432-69.18 24.007-88.77 63.428c-5.348 12.688-6.118 27.273-6.372 41.821v291.797H475.708c.66-145.877 1.567-291.743 1.245-437.622c0-41.438-.399-69.34-1.245-83.716h172.485v73.535c14.641-20.823 30.879-40.571 52.66-56.47c29.545-21.085 65.036-29.168 103.346-29.809m-597.436 12.744h172.485v521.338H206.763z'/%3E%3C/svg%3E")}:where(.i-el\:phone){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200' width='1200' height='1200'%3E%3Cpath fill='black' d='m1183.326 997.842l-169.187 167.83c-24.974 25.612-58.077 34.289-90.316 34.328c-142.571-4.271-277.333-74.304-387.981-146.215C354.22 921.655 187.574 757.82 82.984 559.832C42.87 476.809-4.198 370.878.299 278.209c.401-34.86 9.795-69.073 34.346-91.543L203.831 17.565c35.132-29.883 69.107-19.551 91.589 15.257l136.111 258.102c14.326 30.577 6.108 63.339-15.266 85.188l-62.332 62.3c-3.848 5.271-6.298 11.271-6.36 17.801c23.902 92.522 96.313 177.799 160.281 236.486c63.967 58.688 132.725 138.198 221.977 157.021c11.032 3.077 24.545 4.158 32.438-3.179l72.51-73.743c24.996-18.945 61.086-28.205 87.771-12.714h1.272l245.51 144.943c36.041 22.592 39.799 66.252 13.994 92.815'/%3E%3C/svg%3E")}:where(.i-lucide\:chevron-left){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m15 18l-6-6l6-6'/%3E%3C/svg%3E")}:where(.i-lucide\:file-text){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8'/%3E%3C/g%3E%3C/svg%3E")}:where(.i-lucide\:folder){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E")}:where(.i-lucide\:home){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8'/%3E%3Cpath d='M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3C/g%3E%3C/svg%3E")}:where(.i-lucide\:user){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/g%3E%3C/svg%3E")}:where(.i-simple-icons\:github){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")}:where(.i-simple-icons\:gmail){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64L12 9.548l6.545-4.91l1.528-1.145C21.69 2.28 24 3.434 24 5.457'/%3E%3C/svg%3E")}}</style><link rel="preload" as="fetch" crossorigin="anonymous" href="/blog/2024-8-21-dungball/_payload.json?d3cad119-1620-43c9-9453-0cef66c461f1"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/C-87D9gP.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BoQgR7Jj.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DlAUqK2U.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/iodf5xBg.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CZrt0nwc.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/o31d74Tl.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DKnaj9Xe.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BbN_dEBx.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BlK3_5BT.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DscvD9SD.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CIAFUO2w.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/C2z7DV0B.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DRg29NLB.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CRD4ruH9.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BRCOiojL.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/jpK8DYVA.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/B2U6v8nY.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/d3cad119-1620-43c9-9453-0cef66c461f1.json"><meta name="theme-color" content="white"><link rel="icon" href="/favicon.ico"><meta property="og:image" content="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light"><meta name="twitter:image" content="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="After your beloved dung ball being trampled by a farmer, your mission is to contaminate the farm to take revenge on the farmer!"><meta property="og:description" content="After your beloved dung ball being trampled by a farmer, your mission is to contaminate the farm to take revenge on the farmer!"><meta property="og:title" content="Dungball Domination - A Game Jam Adventure"><script type="module" src="/_nuxt/C-87D9gP.js" crossorigin></script><script>"use strict";(()=>{const t=window,e=document.documentElement,c=["dark","light"],n=getStorageValue("localStorage","nuxt-color-mode")||"system";let i=n==="system"?u():n;const r=e.getAttribute("data-color-mode-forced");r&&(i=r),l(i),t["__NUXT_COLOR_MODE__"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=""+o+"",a="";e.classList?e.classList.add(s):e.className+=" "+s,a&&e.setAttribute("data-"+a,o)}function d(o){const s=""+o+"",a="";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,"g"),""),a&&e.removeAttribute("data-"+a)}function f(o){return t.matchMedia("(prefers-color-scheme"+o+")")}function u(){if(t.matchMedia&&f("").media!=="not all"){for(const o of c)if(f(":"+o).matches)return o}return"light"}})();function getStorageValue(t,e){switch(t){case"localStorage":return window.localStorage.getItem(e);case"sessionStorage":return window.sessionStorage.getItem(e);case"cookie":return getCookie(e);default:return null}}function getCookie(t){const c=("; "+window.document.cookie).split("; "+t+"=");if(c.length===2)return c.pop()?.split(";").shift()}</script></head><body><div id="__nuxt" class="isolate"><!--[--><!--[--><!--[--><!--[--><!--[--><div><div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 sm:border-x border-default pt-10"><!--[--><div class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10"><!--[--><!----><!----><nav data-collapsed="false" class="relative flex gap-1.5 [&amp;&gt;div]:min-w-0 items-center justify-between bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5" aria-label="Main" data-orientation="horizontal" dir="ltr" data-reka-navigation-menu><!--[--><!--[--><!--]--><!--[--><!--[--><div style="position:relative;"><ul class="isolate min-w-0 flex items-center" data-orientation="horizontal"><!--[--><!--[--><li data-menu-item class="min-w-0 py-2"><!--[--><!--[--><a href="/" data-reka-collection-item class="group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2 focus-visible:before:ring-inverted before:inset-x-px before:inset-y-0 text-muted hover:text-highlighted transition-colors data-[state=open]:text-highlighted px-2 py-1"><!--[--><!--[--><!--[--><span class="iconify i-lucide:home shrink-0 size-5 text-dimmed group-hover:text-default transition-colors group-data-[state=open]:text-default hidden" aria-hidden="true" style=""></span><!--]--><span class="truncate"><!--[-->Home<!--]--><!----></span><!----><!--]--><!--]--></a><!----><!--]--><!----><!--]--></li><li data-menu-item class="min-w-0 py-2"><!--[--><!--[--><a href="/projects" data-reka-collection-item class="group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2 focus-visible:before:ring-inverted before:inset-x-px before:inset-y-0 text-muted hover:text-highlighted transition-colors data-[state=open]:text-highlighted px-2 py-1"><!--[--><!--[--><!--[--><span class="iconify i-lucide:folder shrink-0 size-5 text-dimmed group-hover:text-default transition-colors group-data-[state=open]:text-default hidden" aria-hidden="true" style=""></span><!--]--><span class="truncate"><!--[-->Projects<!--]--><!----></span><!----><!--]--><!--]--></a><!----><!--]--><!----><!--]--></li><li data-menu-item class="min-w-0 py-2"><!--[--><!--[--><a href="/blog" data-reka-collection-item class="group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2 focus-visible:before:ring-inverted before:inset-x-px before:inset-y-0 text-muted hover:text-highlighted transition-colors data-[state=open]:text-highlighted px-2 py-1"><!--[--><!--[--><!--[--><span class="iconify i-lucide:file-text shrink-0 size-5 text-dimmed group-hover:text-default transition-colors group-data-[state=open]:text-default hidden" aria-hidden="true" style=""></span><!--]--><span class="truncate"><!--[-->Blog<!--]--><!----></span><!----><!--]--><!--]--></a><!----><!--]--><!----><!--]--></li><li data-menu-item class="min-w-0 py-2"><!--[--><!--[--><a href="/about" data-reka-collection-item class="group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2 focus-visible:before:ring-inverted before:inset-x-px before:inset-y-0 text-muted hover:text-highlighted transition-colors data-[state=open]:text-highlighted px-2 py-1"><!--[--><!--[--><!--[--><span class="iconify i-lucide:user shrink-0 size-5 text-dimmed group-hover:text-default transition-colors group-data-[state=open]:text-default hidden" aria-hidden="true" style=""></span><!--]--><span class="truncate"><!--[-->About<!--]--><!----></span><!----><!--]--><!--]--></a><!----><!--]--><!----><!--]--></li><!--]--><!--]--></ul></div><!----><!--]--><!--]--><!--[--><!--[--><div class="size-4"></div><!--]--><!--]--><div class="absolute top-full left-0 flex w-full justify-center"><!----><!----></div><!--]--></nav><!--]--></div><!--[--><div class="relative min-h-screen"><div class="min-h-screen"><div class="relative py-16 sm:py-24"><div class="mx-auto max-w-7xl px-6 lg:px-8"><a href="/blog" class="focus-visible:outline-primary text-muted hover:text-default transition-colors text-sm flex items-center gap-1 mb-8"><!--[--><!--[--><span class="iconify i-lucide:chevron-left" aria-hidden="true" style=""></span> Blog <!--]--><!--]--></a><div class="flex flex-col gap-3"><div class="flex text-xs text-muted items-center justify-center gap-2"><span>Aug 20, 2024</span><span> - </span><span>8 MIN READ </span></div><img src="/img/coverage.gif" alt="Dungball Domination - A Game Jam Adventure" class="rounded-lg w-full h-[300px] object-cover object-center"><h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">Dungball Domination - A Game Jam Adventure</h1><p class="text-muted text-center max-w-2xl mx-auto">After your beloved dung ball being trampled by a farmer, your mission is to contaminate the farm to take revenge on the farmer!</p><div class="flex items-center justify-center gap-2 mt-2"><div class="flex flex-col items-center text-center"><img src="/img/profile.png" alt="Weizheng Liang" class="w-12 h-12 rounded-full mb-2"><div class="text-sm font-medium text-gray-900 dark:text-white">Weizheng Liang</div><!----></div></div></div><div class="max-w-3xl mx-auto mt-12"><div class="prose prose-gray dark:prose-invert max-w-none blog-content"><div><div class="grid grid-cols-2 gap-4 mb-8">
+  <div class="bg-blue-50 rounded-lg p-4">
+    <strong><!--[-->Link<!--]--></strong><br>
+     <a href="https://ldjam.com/events/ludum-dare/56/dungball-domination" rel="noopener noreferrer" target="_blank" class="text-blue-600"><!--[-->
+      Dungball Domination: A Game Jam Adventure
+    <!--]--></a>
+  </div>
+  <div class="bg-blue-50 rounded-lg p-4">
+    <strong><!--[-->Tool<!--]--></strong><br>
+    C+     Unity 
+  </div>
+  <div class="bg-blue-50 rounded-lg p-4">
+    <strong><!--[-->Role<!--]--></strong><br>
+    Solo Developer
+  </div>
+  <div class="bg-blue-50 rounded-lg p-4">
+    <strong><!--[-->Genre<!--]--></strong><br>
+    Casual     Top-down
+  </div></div><p><!--[-->Get ready to roll with Dungball Domination, a cartoony top-down view casual game! After your beloved dung ball being trampled by a farmer, your mission is to contaminate the farm to take revenge on the farmer!<!--]--></p><p><!--[-->Sneaking into the farm, you&#39;ll need to collect dung dropped by the livestock and cover the floors in a smelly masterpiece. But watch out! The farmer and his animals are on the lookout. Dodge their footsteps to survive! Fill every corner with dung and leave the farmer overwhelmed by the stench to claim your victory in this hilarious battle of wits!<!--]--></p><figure class="blog-img-container">
+  <img src="/img/projects/dungball/mainmenu.png" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Gameplay: Sneaking through the farm while avoiding the farmer and animals</figcaption></figure><h2 id="game-jam-results"><a href="#game-jam-results"><!--[-->Game Jam Results<!--]--></a></h2><h3 id="ludum-dare-56-rankings"><a href="#ludum-dare-56-rankings"><!--[-->Ludum Dare 56 Rankings<!--]--></a></h3><div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8">
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🏆</span>
+        </div>
+        <div class="score-title">Overall</div>
+      </div>
+      <div class="score-value">Top 16.8%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🎮</span>
+        </div>
+        <div class="score-title">Fun</div>
+      </div>
+      <div class="score-value">Top 12.5%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">💡</span>
+        </div>
+        <div class="score-title">Innovation</div>
+      </div>
+      <div class="score-value">Top 13%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🎯</span>
+        </div>
+        <div class="score-title">Theme</div>
+      </div>
+      <div class="score-value">Top 7.5%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🎨</span>
+        </div>
+        <div class="score-title">Graphics</div>
+      </div>
+      <div class="score-value">Top 8.7%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🎵</span>
+        </div>
+        <div class="score-title">Audio</div>
+      </div>
+      <div class="score-value">Top 1.6%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">😂</span>
+        </div>
+        <div class="score-title">Humor</div>
+      </div>
+      <div class="score-value">Top 20%</div>
+    </div>
+  </div>
+  
+  <div class="score-card">
+    <div class="score-card-content">
+      <div class="score-card-header">
+        <div class="score-icon">
+          <span class="score-icon-text">🌟</span>
+        </div>
+        <div class="score-title">Mood</div>
+      </div>
+      <div class="score-value">Top 20%</div>
+    </div>
+  </div></div><h3 id="player-comments"><a href="#player-comments"><!--[-->Player Comments<!--]--></a></h3><blockquote><!--[--><p><!--[-->&quot;OMG SO FUN I LOVE IT&quot;<!--]--></p><!--]--></blockquote><blockquote><!--[--><p><!--[-->&quot;Cool game, very fun. I really like your VFX; they add a lot of polish to the game. However, I encountered quite a few collision bugs when the player was in tight spaces, but it&#39;s a minor issue — I was able to get out of it. Overall, it&#39;s a good game&quot;<!--]--></p><!--]--></blockquote><blockquote><!--[--><p><!--[-->&quot;It&#39;s fun. Very good dung Beetle simulator&quot;<!--]--></p><!--]--></blockquote><blockquote><!--[--><p><!--[-->&quot;I like this funny idea and of course the gold opening screen. The game was very easy to win, but I played it a few times for fun. For me personally, there wasn&#39;t enough variety in the game mechanics, but anyway, good job!&quot;<!--]--></p><!--]--></blockquote><h2 id="core-features"><a href="#core-features"><!--[-->Core Features<!--]--></a></h2><h3 id="dynamic-dung-ball-mechanics"><a href="#dynamic-dung-ball-mechanics"><!--[-->Dynamic Dung Ball Mechanics<!--]--></a></h3><figure class="blog-img-container">
+  <img src="/img/projects/dungball/DungBallGetsBig.gif" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Control a beetle pushing a dung ball that changes size based on collections and usage</figcaption></figure><h3 id="strategic-floor-coverage"><a href="#strategic-floor-coverage"><!--[-->Strategic Floor Coverage<!--]--></a></h3><figure class="blog-img-container">
+  <img src="/img/projects/dungball/StrategicfloorCoverage.gif" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Leave dung trails strategically while managing your ball size</figcaption></figure><h3 id="dodge-and-survive"><a href="#dodge-and-survive"><!--[-->Dodge and Survive<!--]--></a></h3><figure class="blog-img-container">
+  <img src="/img/projects/dungball/DogeAndSurvive2.gif" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Avoid animal footsteps while completing your mission</figcaption></figure><h3 id="engaging-ui-and-animations"><a href="#engaging-ui-and-animations"><!--[-->Engaging UI and Animations<!--]--></a></h3><figure class="blog-img-container">
+  <img src="/img/projects/dungball/startingAnimation.gif" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Enjoy polished visuals and entertaining animations</figcaption></figure><h2 id="development-journey"><a href="#development-journey"><!--[-->Development Journey<!--]--></a></h2><h3 id="game-jam-experience"><a href="#game-jam-experience"><!--[-->Game Jam Experience<!--]--></a></h3><p><!--[-->When the theme &quot;Tiny Creature&quot; was announced, our team immediately began brainstorming ideas. After considering various concepts like microscopic medicine adventures and ant colonies, we settled on the dung beetle concept for its unique gameplay potential and humorous appeal. The initial 8 hours were crucial for establishing our vision and dividing responsibilities among team members.<!--]--></p><h4 id="development-timeline"><a href="#development-timeline"><!--[-->Development Timeline<!--]--></a></h4><p><!--[--><strong><!--[-->First 24 Hours<!--]--></strong><!--]--></p><ul><!--[--><li><!--[-->Implemented basic player and camera controllers<!--]--></li><li><!--[-->Created dung ball physics and collection mechanics<!--]--></li><li><!--[-->Developed ground painting system for dung trails<!--]--></li><li><!--[-->Added win/lose conditions and core gameplay loop<!--]--></li><!--]--></ul><p><!--[--><strong><!--[-->24-48 Hours<!--]--></strong><!--]--></p><ul><!--[--><li><!--[-->Refined player controls and ball physics<!--]--></li><li><!--[-->Implemented UI systems and menus<!--]--></li><li><!--[-->Added coverage calculation and display<!--]--></li><li><!--[-->Integrated footstep mechanics<!--]--></li><!--]--></ul><p><!--[--><strong><!--[-->Final 24 Hours<!--]--></strong><!--]--></p><ul><!--[--><li><!--[-->Added visual effects and animations<!--]--></li><li><!--[-->Implemented sound effects and feedback<!--]--></li><li><!--[-->Bug fixing and performance optimization<!--]--></li><li><!--[-->Final polish and submission preparation<!--]--></li><!--]--></ul><h3 id="playtesting-and-iteration"><a href="#playtesting-and-iteration"><!--[-->Playtesting and Iteration<!--]--></a></h3><p><!--[-->During the game jam rating time, I actively collected player feedback and quickly iterated on the game design. One particularly valuable piece of feedback led to a significant improvement in the game&#39;s mechanics.<!--]--></p><blockquote><!--[--><p><!--[--><strong><!--[-->Player Suggestion<!--]--></strong><!--]--></p><p><!--[-->&quot;Completely funny, if there is a mode that makes the ball roll more and more bigger, it will be interesting&quot;<!--]--></p><!--]--></blockquote><blockquote><!--[--><p><!--[--><strong><!--[-->Implementation &amp; Reply<!--]--></strong><!--]--></p><p><!--[-->&quot;Thanks a ton for playing the game and dropping your feedback! 🙌 Just wanted to let you know that we added a new feature based on your idea! The ball now gets smaller as it rolls but grows bigger when the beetle collects dungpiles. It’s a bit of a twist, but we think it adds a fun challenge! 😄 Hope you get a chance to check it out, and we’d love to hear what you think of the update! Cheers&quot;<!--]--></p><!--]--></blockquote><figure class="blog-img-container">
+  <img src="/img/projects/dungball/DungBallGetsBig.gif" alt="img" class="blog-img" loading="lazy">
+  <figcaption class="blog-img-caption">Before/After comparison of the dung ball size indicator implementation</figcaption></figure><h2 id="game-flow-and-key-code-snippets"><a href="#game-flow-and-key-code-snippets"><!--[-->Game Flow and Key Code Snippets<!--]--></a></h2><p><!--[-->This diagram illustrates the core gameplay loop of PolySpell, along with key code snippets:<!--]--></p><figure class="blog-img-container">
+  <img src="/img/projects/dungball/link.png" alt="img" class="blog-img" loading="lazy"></figure><h2 id="key-code-snippets"><a href="#key-code-snippets"><!--[-->Key Code Snippets<!--]--></a></h2><p><!--[-->Beetle Movement<!--]--></p><pre class="language-csharp shiki shiki-themes github-dark" style=""><!--[--><code><span class="line" line="1"><span>void UpdateMovement(Vector2 input) {
+</span></span><span class="line" line="2"><span>    // Calculate movement direction
+</span></span><span class="line" line="3"><span>    Vector2 direction = input.normalized;
+</span></span><span class="line" line="4"><span>    // Move beetle and attached dung ball
+</span></span><span class="line" line="5"><span>    transform.position += direction * speed * Time.deltaTime;
+</span></span><span class="line" line="6"><span>    dungBall.UpdatePosition(transform.position);
+</span></span><span class="line" line="7"><span>}
+</span></span></code><!--]--></pre><p><!--[-->Dung Trail<!--]--></p><pre class="language-csharp shiki shiki-themes github-dark" style=""><!--[--><code><span class="line" line="1"><span>void LeaveDungTrail() {
+</span></span><span class="line" line="2"><span>    if (Input.GetKey(KeyCode.Space) &amp;&amp; dungBall.size &gt; minSize) {
+</span></span><span class="line" line="3"><span>        // Create dung trail based on ball size
+</span></span><span class="line" line="4"><span>        float radius = dungBall.size * trailMultiplier;
+</span></span><span class="line" line="5"><span>        PaintDungOnGround(transform.position, radius);
+</span></span><span class="line" line="6"><span>        // Reduce ball size
+</span></span><span class="line" line="7"><span>        dungBall.DecreaseSize(decreaseRate * Time.deltaTime);
+</span></span><span class="line" line="8"><span>    }
+</span></span><span class="line" line="9"><span>}
+</span></span></code><!--]--></pre><p><!--[-->Coverage Check<!--]--></p><pre class="language-csharp shiki shiki-themes github-dark" style=""><!--[--><code><span class="line" line="1"><span>bool CheckWinCondition() {
+</span></span><span class="line" line="2"><span>    // Calculate current coverage percentage
+</span></span><span class="line" line="3"><span>    float coverage = GetDungCoverage();
+</span></span><span class="line" line="4"><span>    // Check if reached target coverage
+</span></span><span class="line" line="5"><span>    return coverage &gt;= targetCoveragePercent;
+</span></span><span class="line" line="6"><span>}
+</span></span></code><!--]--></pre><h2 id="key-algorithms"><a href="#key-algorithms"><!--[-->Key Algorithms<!--]--></a></h2><p><!--[-->Dung Coverage<!--]--></p><pre class="language-csharp shiki shiki-themes github-dark" style=""><!--[--><code><span class="line" line="1"><span>float CalculateDungCoverage() {
+</span></span><span class="line" line="2"><span>    int totalPixels = groundTexture.width * groundTexture.height;
+</span></span><span class="line" line="3"><span>    int coveredPixels = 0;
+</span></span><span class="line" line="4"><span emptylineplaceholder="true">
+</span></span><span class="line" line="5"><span>    // Count pixels covered by dung
+</span></span><span class="line" line="6"><span>    Color[] pixels = groundTexture.GetPixels();
+</span></span><span class="line" line="7"><span>    foreach (Color pixel in pixels) {
+</span></span><span class="line" line="8"><span>        if (pixel.a &gt; 0.5f) coveredPixels++;
+</span></span><span class="line" line="9"><span>    }
+</span></span><span class="line" line="10"><span emptylineplaceholder="true">
+</span></span><span class="line" line="11"><span>    return (float)coveredPixels / totalPixels * 100f;
+</span></span><span class="line" line="12"><span>}
+</span></span></code><!--]--></pre><p><!--[-->Collision Detection<!--]--></p><pre class="language-csharp shiki shiki-themes github-dark" style=""><!--[--><code><span class="line" line="1"><span>void CheckFootstepCollision(Vector2 footPosition) {
+</span></span><span class="line" line="2"><span>    float distance = Vector2.Distance(transform.position, footPosition);
+</span></span><span class="line" line="3"><span>    if (distance &lt; (dungBall.size + footSize) * 0.5f) {
+</span></span><span class="line" line="4"><span>        // Game over if stepped on
+</span></span><span class="line" line="5"><span>        GameManager.Instance.GameOver();
+</span></span><span class="line" line="6"><span>    }
+</span></span><span class="line" line="7"><span>}
+</span></span></code><!--]--></pre><h2 id="learning-outcome"><a href="#learning-outcome"><!--[-->Learning Outcome<!--]--></a></h2><p><!--[-->Deepened understanding of game physics, procedural generation, and the importance of iterative design based on player feedback<!--]--></p><h3 id="conclusion"><a href="#conclusion"><!--[-->Conclusion<!--]--></a></h3><p><!--[-->Dungball Domination achieved remarkable success in the Ludum Dare 56 game jam, ranking in the top 16.8% overall and notably in the top 1.6% for Humor. The game successfully delivers:<!--]--></p><ul><!--[--><li><!--[-->A complete and polished game created within the 72-hour time constraint<!--]--></li><li><!--[-->Unique and entertaining gameplay mechanics that effectively utilize the &quot;Tiny Creature&quot; theme<!--]--></li><li><!--[-->Engaging visual style with smooth animations and satisfying feedback<!--]--></li><li><!--[-->High replay value through dynamic gameplay elements<!--]--></li><!--]--></ul><h3 id="reflection"><a href="#reflection"><!--[-->Reflection<!--]--></a></h3><p><!--[-->Participating in Ludum Dare 56 was an intense and rewarding experience. Working under extreme time pressure taught valuable lessons about rapid prototyping, efficient decision-making, and team coordination. The project&#39;s success in the humor category validated our creative direction and demonstrated the importance of maintaining a clear vision even under tight deadlines.<!--]--></p><p><!--[--><strong><!--[-->Play game<!--]--></strong>: <a href="https://ldjam.com/events/ludum-dare/56/dungball-domination" rel="nofollow"><!--[-->Dungball Domination: A Game Jam Adventure<!--]--></a><!--]--></p><p><!--[--><strong><!--[-->Source code<!--]--></strong>: <a href="https://github.com/minnnpan/ShiKeLang" rel="nofollow"><!--[-->Source Code of Dungball<!--]--></a>.<!--]--></p><style>html .default .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}</style></div></div><div class="flex items-center justify-end gap-2 text-sm text-muted mt-8"><!--[--><!--[--><button type="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 text-muted hover:text-default active:text-default disabled:text-muted aria-disabled:text-muted focus:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-inverted"><!--[--><!--[--><!----><!--]--><!--[--><span class="truncate">Copy link</span><!--]--><!--[--><!----><!--]--><!--]--></button><!--]--><!--]--></div><div class="mt-8"><div class="flex items-center justify-between"><!----><!----></div></div></div></div></div></div></div><!--]--><footer class="z-10"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="flex flex-col sm:flex-row justify-between items-center py-8 gap-4"><div class="text-xs text-gray-500 dark:text-gray-400">Copyright © 2025</div><div class="flex items-center gap-4"><!--[--><!--[--><!--[--><div id="reka-popover-trigger-v-0-1" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls data-state="closed"><!--[--><!--[--><!--[--><button type="button" rel="noopener noreferrer" target="_blank" account="lwz.employ@gmail.com" aria-label="Gmail address" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-xs gap-1 text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1"><!--[--><!--[--><span class="iconify i-simple-icons:gmail shrink-0 size-4" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></button><!--]--><!--]--><!--]--></div><!----><!--v-if--><!--]--><!--]--><!--[--><!--[--><div id="reka-popover-trigger-v-0-2" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls data-state="closed"><!--[--><!--[--><!--[--><a href="https://www.linkedin.com/in/weizhengliang/" rel="noopener noreferrer" target="_blank" aria-label="Linkedin address" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-xs gap-1 text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1"><!--[--><!--[--><span class="iconify i-el:linkedin shrink-0 size-4" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></a><!--]--><!--]--><!--]--></div><!----><!--v-if--><!--]--><!--]--><!--[--><!--[--><div id="reka-popover-trigger-v-0-3" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls data-state="closed"><!--[--><!--[--><!--[--><button type="button" account="305-505-8689" aria-label="Phone Number" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-xs gap-1 text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1"><!--[--><!--[--><span class="iconify i-el:phone shrink-0 size-4" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></button><!--]--><!--]--><!--]--></div><!----><!--v-if--><!--]--><!--]--><!--[--><!--[--><div id="reka-popover-trigger-v-0-4" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls data-state="closed"><!--[--><!--[--><!--[--><a href="https://github.com/weizhengliang" rel="noopener noreferrer" target="_blank" aria-label="GitHub address" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-xs gap-1 text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1"><!--[--><!--[--><span class="iconify i-simple-icons:github shrink-0 size-4" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></a><!--]--><!--]--><!--]--></div><!----><!--v-if--><!--]--><!--]--><!--]--></div></div></div></footer><!--]--></div></div><!--]--><!--]--><!--[--><!--]--><!--v-if--><!--]--><!--[--><!--]--><!--]--><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/blog/2024-8-21-dungball/_payload.json?d3cad119-1620-43c9-9453-0cef66c461f1">[{"state":1,"once":14,"_errors":15,"serverRendered":5,"path":17,"prerenderedAt":18},["Reactive",2],{"$scolor-mode":3,"$stoasts":7,"$ssite-config":8},{"preference":4,"value":4,"unknown":5,"forced":6},"system",true,false,[],{"_priority":9,"env":12,"name":13},{"name":10,"env":11},-10,-15,"production","nuxt-app",["Set"],["ShallowReactive",16],{"/blog/2024-8-21-dungball":-1,"/blog/2024-8-21-dungball-surround":-1},"/blog/2024-8-21-dungball",1756521956660]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:{h1:false,h2:true,h3:true,h4:true,h5:false,h6:false}}}},app:{baseURL:"/",buildId:"d3cad119-1620-43c9-9453-0cef66c461f1",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

@@ -29,16 +29,22 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/'
   },
 
-  css: ['~/assets/css/main.css'],
-
-  compatibilityDate: '2024-11-01',
-
+  // GitHub Pages configuration
   nitro: {
     prerender: {
       routes: ['/', '/about', '/blog', '/projects', '/speaking'],
       crawlLinks: true
     }
   },
+
+  // Output directory for GitHub Pages
+  output: {
+    dir: 'docs'
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  compatibilityDate: '2024-11-01',
 
   eslint: {
     config: {
