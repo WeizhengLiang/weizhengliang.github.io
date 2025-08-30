@@ -5,6 +5,20 @@
     colorMode.value === 'dark' ? '#020618' : 'white'
   )
 
+  // Handle GitHub Pages routing
+  onMounted(() => {
+    // Check if we're on GitHub Pages and need to handle routing
+    if (typeof window !== 'undefined') {
+      const { pathname } = window.location
+      if (pathname.includes('/?/')) {
+        // This is a redirect from 404.html, handle it
+        const path = pathname.split('/?/')[1].replace(/~and~/g, '&')
+        const newPath = '/' + path
+        window.history.replaceState(null, '', newPath)
+      }
+    }
+  })
+
   useHead({
     meta: [
       { charset: 'utf-8' },

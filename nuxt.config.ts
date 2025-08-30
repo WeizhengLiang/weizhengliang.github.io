@@ -32,15 +32,27 @@ export default defineNuxtConfig({
   // GitHub Pages configuration
   nitro: {
     prerender: {
-      routes: ['/', '/about', '/blog', '/projects', '/speaking'],
-      crawlLinks: true
+      routes: [
+        '/',
+        '/about', 
+        '/blog',
+        '/projects',
+        '/speaking',
+        // Blog post routes
+        '/blog/2024-11-12-combat',
+        '/blog/2024-8-21-dungball',
+        '/blog/2024-8-3-polyspell',
+        '/blog/2025-5-18-investor',
+        '/blog/2024-12-30-alien'
+      ],
+      crawlLinks: true,
+      ignore: [
+        '/api/**'
+      ]
     }
   },
 
-  // Output directory for GitHub Pages
-  output: {
-    dir: 'docs'
-  },
+
 
   css: ['~/assets/css/main.css'],
 
