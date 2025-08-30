@@ -3,21 +3,33 @@
 
   const route = useRoute()
 
-  // Normalize the path to handle both with and without trailing slash
-  // Remove trailing slash for content queries since our content paths don't have them
-  const normalizedPath = route.path.endsWith('/') ? route.path.slice(0, -1) : route.path
+  // 强健的路径匹配逻辑：先尝试无尾斜杠，再兜底尝试有尾斜杠
+  const { data: page } = await useAsyncData(route.path, async () => {
+    const pathWithoutSlash = route.path.endsWith('/') ? route.path.slice(0, -1) : route.path
+    const pathWithSlash = route.path.endsWith('/') ? route.path : route.path + '/'
+    
+    // 先尝试无尾斜杠的路径
+    let result = await queryCollection('blog').path(pathWithoutSlash).first()
+    
+    // 如果找不到，再尝试有尾斜杠的路径
+    if (!result) {
+      result = await queryCollection('blog').path(pathWithSlash).first()
+    }
+    
+    return result
+  })
   
-  const { data: page } = await useAsyncData(route.path, () =>
-    queryCollection('blog').path(normalizedPath).first()
-  )
   if (!page.value)
     throw createError({
       statusCode: 404,
       statusMessage: 'Page not found',
       fatal: true
     })
+    
+  // 使用找到的页面的实际路径进行 surround 查询
+  const actualPath = page.value._path
   const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-    queryCollectionItemSurroundings('blog', normalizedPath, {
+    queryCollectionItemSurroundings('blog', actualPath, {
       fields: ['description']
     })
   )
@@ -139,7 +151,7 @@ v-if="surround.prev"
 class="flex-1"
 >
                 <ULink
-                  :to="surround.prev._path"
+                  :to="surround.prev._path.endsWith('/') ? surround.prev._path : surround.prev._path + '/'"
                   class="flex items-center gap-2 text-sm"
                 >
                   <UIcon name="lucide:chevron-left" />
@@ -151,7 +163,7 @@ v-if="surround.next"
 class="flex-1 text-right"
 >
                 <ULink
-                  :to="surround.next._path"
+                  :to="surround.next._path.endsWith('/') ? surround.next._path : surround.next._path + '/'"
                   class="flex items-center gap-2 text-sm justify-end"
                 >
                   {{ surround.next.title }}

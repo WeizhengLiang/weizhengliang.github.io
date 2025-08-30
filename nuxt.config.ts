@@ -38,12 +38,12 @@ export default defineNuxtConfig({
         '/blog',
         '/projects',
         '/speaking',
-        // Blog post routes
-        '/blog/2024-11-12-combat',
-        '/blog/2024-8-21-dungball',
-        '/blog/2024-8-3-polyspell',
-        '/blog/2025-5-18-investor',
-        '/blog/2024-12-30-alien'
+        // Blog post routes (with trailing slashes for proper directory structure)
+        '/blog/2024-11-12-combat/',
+        '/blog/2024-8-21-dungball/',
+        '/blog/2024-8-3-polyspell/',
+        '/blog/2025-5-18-investor/',
+        '/blog/2024-12-30-alien/'
       ],
       crawlLinks: true,
       ignore: [
