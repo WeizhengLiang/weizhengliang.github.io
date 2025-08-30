@@ -54,6 +54,13 @@ export default defineNuxtConfig({
     // Generate proper file structure for static hosting
     output: {
       publicDir: 'docs'
+    },
+    // Handle GitHub Pages routing
+    routeRules: {
+      '/blog/**': { 
+        prerender: true,
+        headers: { 'Cache-Control': 's-maxage=31536000' }
+      }
     }
   },
 

@@ -4,25 +4,22 @@
     <meta charset="utf-8">
     <title>Page Not Found</title>
     <script>
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        // This script takes the current url and converts the path and query
-        // string into just a query string, and then redirects to the
-        // new url with only a query string and hash fragment.
-        var pathSegmentsToKeep = 0;
-
-        var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+        // GitHub Pages SPA redirect
+        var currentPath = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        // Create the redirect URL to include the path as a parameter
+        var redirectUrl = window.location.origin + '/?/' + 
+            currentPath.slice(1).replace(/&/g, '~and~') +
+            (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '') +
+            hash;
+            
+        // Redirect to the main app
+        window.location.replace(redirectUrl);
     </script>
 </head>
 <body>
-    Redirecting...
+    <p>Redirecting to the main application...</p>
 </body>
 </html>
