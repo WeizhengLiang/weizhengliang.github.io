@@ -3,20 +3,48 @@
 
   const route = useRoute()
 
-  const { data: page } = await useAsyncData(route.path, () =>
-    queryCollection('blog').path(route.path).first()
-  )
+  // Normalize path to handle trailing slash inconsistency
+  const normalizePath = (path: string) => {
+    // Remove trailing slash for consistent matching
+    return path.endsWith('/') ? path.slice(0, -1) : path
+  }
+
+  const normalizedPath = normalizePath(route.path)
+
+  const { data: page } = await useAsyncData(normalizedPath, async () => {
+    // Try without trailing slash first
+    let result = await queryCollection('blog').path(normalizedPath).first()
+    
+    // If not found, try with trailing slash as fallback
+    if (!result) {
+      result = await queryCollection('blog').path(`${normalizedPath}/`).first()
+    }
+    
+    return result
+  })
+  
   if (!page.value)
     throw createError({
       statusCode: 404,
       statusMessage: 'Page not found',
       fatal: true
     })
-  const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-    queryCollectionItemSurroundings('blog', route.path, {
+    
+  const { data: surround } = await useAsyncData(`${normalizedPath}-surround`, async () => {
+    // Try without trailing slash first
+    let result = await queryCollectionItemSurroundings('blog', normalizedPath, {
       fields: ['description']
     })
-  )
+    
+    // If not found, try with trailing slash as fallback
+    if (!result) {
+      result = await queryCollectionItemSurroundings('blog', `${normalizedPath}/`, {
+        fields: ['description']
+      })
+    }
+    
+    return result
+  })
 
   // Simplified navigation without UI Pro dependencies
 

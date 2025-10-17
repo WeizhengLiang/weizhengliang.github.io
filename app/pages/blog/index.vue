@@ -97,7 +97,7 @@
                     {{ post.description }}
                   </p>
                   <ULink
-                    :to="post.path"
+                    :to="post.path + '/'"
                     class="text-sm text-primary flex items-center"
                   >
                     Read Article
