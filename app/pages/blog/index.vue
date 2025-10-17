@@ -34,7 +34,7 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h1
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100"
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100"
           >
             {{ page.title }}
           </h1>
@@ -72,8 +72,8 @@
                       index % 3 === 0
                         ? '-rotate-2'
                         : index % 3 === 1
-                          ? 'rotate-1'
-                          : 'rotate-2'
+                        ? 'rotate-1'
+                        : 'rotate-2'
                     "
                   />
                 </div>
@@ -97,7 +97,7 @@
                     {{ post.description }}
                   </p>
                   <ULink
-                    :to="post.path + '/'"
+                    :to="post.path"
                     class="text-sm text-primary flex items-center"
                   >
                     Read Article

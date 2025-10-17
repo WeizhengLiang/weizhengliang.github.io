@@ -91,7 +91,7 @@
 
                   <div class="flex justify-between">
                     <ULink
-                      :to="project.url + '/'"
+                      :to="project.url"
                       class="text-sm text-primary flex items-center"
                     >
                       View Project
@@ -140,7 +140,7 @@
                     :src="project.image"
                     :alt="project.title"
                     class="object-cover w-full h-48 rounded-lg shadow-lg"
-                  >
+                  />
                 </div>
               </div>
             </div>

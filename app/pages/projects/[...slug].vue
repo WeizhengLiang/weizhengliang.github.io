@@ -4,23 +4,23 @@
   const route = useRoute()
 
   // Normalize path to handle trailing slash inconsistency
-  const normalizePath = (path: string) => {
+  const normalizedPath = computed(() => {
+    const path = route.path
     // Remove trailing slash for consistent matching
     return path.endsWith('/') ? path.slice(0, -1) : path
-  }
+  })
 
-  const normalizedPath = normalizePath(route.path)
+  const { data: page } = await useAsyncData(normalizedPath.value, () => {
+    // Try without trailing slash first, then with trailing slash as fallback
+    const pathWithoutSlash = normalizedPath.value
+    const pathWithSlash = normalizedPath.value + '/'
 
-  const { data: page } = await useAsyncData(normalizedPath, async () => {
-    // Try without trailing slash first
-    let result = await queryCollection('projects').path(normalizedPath).first()
+    // First try without trailing slash
+    const result = queryCollection('projects').path(pathWithoutSlash).first()
+    if (result) return result
 
-    // If not found, try with trailing slash as fallback
-    if (!result) {
-      result = await queryCollection('projects').path(`${normalizedPath}/`).first()
-    }
-
-    return result
+    // Fallback: try with trailing slash
+    return queryCollection('projects').path(pathWithSlash).first()
   })
 
   if (!page.value)
@@ -29,6 +29,17 @@
       statusMessage: 'Page not found',
       fatal: true
     })
+
+  // Projects don't support surroundings since they're data collections, not page collections
+  // const { data: surround } = await useAsyncData(
+  //   `${normalizedPath.value}-surround`,
+  //   () =>
+  //     queryCollectionItemSurroundings('projects', normalizedPath.value, {
+  //       fields: ['description']
+  //     })
+  // )
+
+  // Simplified navigation without UI Pro dependencies
 
   const title = page.value?.title
   const description = page.value?.description
@@ -40,6 +51,8 @@
     ogTitle: title
   })
 
+  const articleLink = computed(() => `${window?.location}`)
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -50,16 +63,10 @@
 </script>
 
 <template>
-  <div
-v-if="page"
-class="min-h-screen"
->
+  <div v-if="page" class="min-h-screen">
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <ULink
-to="/projects"
-class="text-sm flex items-center gap-1 mb-8"
->
+        <ULink to="/projects" class="text-sm flex items-center gap-1 mb-8">
           <UIcon name="lucide:chevron-left" />
           Projects
         </ULink>
@@ -68,15 +75,15 @@ class="text-sm flex items-center gap-1 mb-8"
           <div
             class="flex text-xs text-muted items-center justify-center gap-2"
           >
-            <span v-if="page.date">
+            <span v-if="page?.date">
               {{ formatDate(page.date) }}
             </span>
           </div>
           <img
-            :src="page.image"
+            :src="page?.image"
             :alt="page.title"
             class="rounded-lg w-full h-[300px] object-cover object-center"
-          >
+          />
           <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
@@ -86,39 +93,27 @@ class="text-sm flex items-center gap-1 mb-8"
         </div>
 
         <div class="max-w-3xl mx-auto mt-12">
-          <div class="flex items-center justify-center gap-4">
-            <UButton
-              v-if="page.code"
-              :to="page.code"
-              target="_blank"
-              color="primary"
-              variant="outline"
-            >
-              View Source Code
-            </UButton>
-            <UButton
-              v-if="page.alive"
-              :to="page.alive"
-              target="_blank"
-              color="primary"
-            >
-              View Live Demo
-            </UButton>
+          <div
+            class="prose prose-gray dark:prose-invert max-w-none blog-content"
+          >
+            <!-- Projects don't have body content, they redirect to external URLs -->
           </div>
 
-          <div class="flex items-center justify-center gap-2 mt-8">
-            <span class="text-sm text-muted">Tags:</span>
-            <div class="flex gap-2">
-              <UBadge
-                v-for="tag in page.tags"
-                :key="tag"
-                variant="soft"
-                color="neutral"
-              >
-                {{ tag }}
-              </UBadge>
-            </div>
+          <div
+            class="flex items-center justify-end gap-2 text-sm text-muted mt-8"
+          >
+            <UButton
+              size="sm"
+              variant="link"
+              color="neutral"
+              label="Copy link"
+              @click="
+                copyToClipboard(articleLink, 'Article link copied to clipboard')
+              "
+            />
           </div>
+
+          <!-- Projects don't have surrounding navigation since they're data collections -->
         </div>
       </div>
     </div>
