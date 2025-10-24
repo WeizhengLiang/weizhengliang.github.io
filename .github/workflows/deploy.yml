@@ -64,7 +64,6 @@ jobs:
     environment:
       name: github-pages
     # The URL will be set by the deploy action itself
-    url: ${{ steps.deployment.outputs.page_url }} 
     runs-on: ubuntu-latest
     needs: build
     steps:
