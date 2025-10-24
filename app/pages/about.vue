@@ -51,7 +51,10 @@
 </script>
 
 <template>
-  <div v-if="page" class="min-h-screen">
+  <div
+v-if="page"
+class="min-h-screen"
+>
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-12">
         <div
@@ -77,7 +80,10 @@
                 class="inline-flex items-center gap-2"
                 @click="openResume"
               >
-                <UIcon name="i-lucide-file-text" class="w-5 h-5" />
+                <UIcon
+name="i-lucide-file-text"
+class="w-5 h-5"
+/>
                 View Resume
               </UButton>
             </div>
@@ -89,7 +95,7 @@
               :src="global.picture?.light"
               :alt="global.picture?.alt"
               class="sm:rotate-4 size-28 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-            />
+            >
           </div>
         </div>
       </div>
@@ -111,7 +117,10 @@
         </div>
 
         <div class="mt-12 max-w-3xl mx-auto prose prose-gray dark:prose-invert">
-          <MDC :value="page.content" class="blog-content" />
+          <MDC
+:value="page.content"
+class="blog-content"
+/>
         </div>
 
         <div

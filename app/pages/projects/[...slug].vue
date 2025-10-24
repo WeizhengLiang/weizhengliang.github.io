@@ -63,10 +63,16 @@
 </script>
 
 <template>
-  <div v-if="page" class="min-h-screen">
+  <div
+v-if="page"
+class="min-h-screen"
+>
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <ULink to="/projects" class="text-sm flex items-center gap-1 mb-8">
+        <ULink
+to="/projects"
+class="text-sm flex items-center gap-1 mb-8"
+>
           <UIcon name="lucide:chevron-left" />
           Projects
         </ULink>
@@ -83,7 +89,7 @@
             :src="page?.image"
             :alt="page.title"
             class="rounded-lg w-full h-[300px] object-cover object-center"
-          />
+          >
           <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
