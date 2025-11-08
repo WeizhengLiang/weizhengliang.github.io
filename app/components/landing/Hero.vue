@@ -34,7 +34,7 @@
               :alt="global.picture?.alt"
               class="size-22 ring ring-default ring-offset-3 ring-offset-(--ui-bg) rounded-full"
               style="object-fit: cover"
-            />
+            >
           </Motion>
         </div>
 
@@ -163,7 +163,7 @@
                 : 'rotate-3'
             "
             v-bind="img"
-          />
+          >
         </Motion>
       </div>
     </div>

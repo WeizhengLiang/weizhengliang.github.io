@@ -32,7 +32,10 @@
 </script>
 
 <template>
-  <div v-if="page" class="min-h-screen">
+  <div
+v-if="page"
+class="min-h-screen"
+>
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl lg:mx-0">
@@ -45,13 +48,19 @@
             {{ page.description }}
           </p>
           <div class="mt-6 flex items-center gap-x-6">
-            <div v-if="page.links" class="flex items-center gap-2">
+            <div
+v-if="page.links"
+class="flex items-center gap-2"
+>
               <UButton
                 :label="page.links[0]?.label"
                 :to="global.meetingLink"
                 v-bind="page.links[0]"
               />
-              <UButton :to="`mailto:${global.email}`" v-bind="page.links[1]" />
+              <UButton
+:to="`mailto:${global.email}`"
+v-bind="page.links[1]"
+/>
             </div>
           </div>
         </div>
@@ -140,7 +149,7 @@
                     :src="project.image"
                     :alt="project.title"
                     class="object-cover w-full h-48 rounded-lg shadow-lg"
-                  />
+                  >
                 </div>
               </div>
             </div>

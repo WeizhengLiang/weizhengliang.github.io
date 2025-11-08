@@ -62,10 +62,16 @@
 </script>
 
 <template>
-  <div v-if="page" class="min-h-screen">
+  <div
+v-if="page"
+class="min-h-screen"
+>
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <ULink to="/blog" class="text-sm flex items-center gap-1 mb-8">
+        <ULink
+to="/blog"
+class="text-sm flex items-center gap-1 mb-8"
+>
           <UIcon name="lucide:chevron-left" />
           Blog
         </ULink>
@@ -84,7 +90,7 @@
             :src="page.image"
             :alt="page.title"
             class="rounded-lg w-full h-[300px] object-cover object-center"
-          />
+          >
           <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
@@ -98,7 +104,7 @@
                 :src="page.author.avatar.src"
                 :alt="page.author?.name"
                 class="w-12 h-12 rounded-full mb-2"
-              />
+              >
               <div
                 v-if="page.author?.name"
                 class="text-sm font-medium text-gray-900 dark:text-white"
@@ -119,7 +125,10 @@
           <div
             class="prose prose-gray dark:prose-invert max-w-none blog-content"
           >
-            <ContentRenderer v-if="page.body" :value="page" />
+            <ContentRenderer
+v-if="page.body"
+:value="page"
+/>
           </div>
 
           <div
@@ -136,9 +145,15 @@
             />
           </div>
 
-          <div v-if="surround && surround.length > 0" class="mt-8">
+          <div
+v-if="surround && surround.length > 0"
+class="mt-8"
+>
             <div class="flex items-center justify-between">
-              <div v-if="surround[0]" class="flex-1">
+              <div
+v-if="surround[0]"
+class="flex-1"
+>
                 <ULink
                   :to="surround[0].path as string"
                   class="flex items-center gap-2 text-sm"
@@ -147,7 +162,10 @@
                   {{ surround[0].title }}
                 </ULink>
               </div>
-              <div v-if="surround[1]" class="flex-1 text-right">
+              <div
+v-if="surround[1]"
+class="flex-1 text-right"
+>
                 <ULink
                   :to="surround[1].path as string"
                   class="flex items-center gap-2 text-sm justify-end"

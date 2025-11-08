@@ -45,11 +45,11 @@
                   : 'We encountered an unexpected error. Please try again later.'
               }}
             </p>
-            <UButton 
-              to="/" 
+            <UButton
+              to="/"
               color="primary"
-            > 
-              Go Home 
+            >
+              Go Home
             </UButton>
           </div>
         </div>

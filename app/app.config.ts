@@ -30,29 +30,29 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        icon: 'i-simple-icons-gmail',
-        to: '',
-        account: 'weizhengliang@gmail.com',
-        target: '_blank',
+        'icon': 'i-simple-icons-gmail',
+        'to': '',
+        'account': 'weizhengliang@gmail.com',
+        'target': '_blank',
         'aria-label': 'Gmail address'
       },
       {
-        icon: 'i-el:linkedin',
-        to: 'https://www.linkedin.com/in/weizhengliang/',
-        target: '_blank',
+        'icon': 'i-el:linkedin',
+        'to': 'https://www.linkedin.com/in/weizhengliang/',
+        'target': '_blank',
         'aria-label': 'Linkedin address'
       },
       {
-        icon: 'i-el:phone',
-        to: '',
-        account: '305-505-8689',
-        target: '',
+        'icon': 'i-el:phone',
+        'to': '',
+        'account': '305-505-8689',
+        'target': '',
         'aria-label': 'Phone Number'
       },
       {
-        icon: 'i-simple-icons-github',
-        to: 'https://github.com/weizhengliang',
-        target: '_blank',
+        'icon': 'i-simple-icons-github',
+        'to': 'https://github.com/weizhengliang',
+        'target': '_blank',
         'aria-label': 'GitHub address'
       }
     ]
