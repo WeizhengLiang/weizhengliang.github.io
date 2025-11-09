@@ -96,7 +96,8 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         date: z.date(),
         code: z.string().url().optional(),
-        alive: z.string().url().optional()
+        alive: z.string().url().optional(),
+        type: z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT']).optional()
       })
     }),
     blog: defineCollection({

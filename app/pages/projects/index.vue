@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import dayjs from 'dayjs'
+  import { PROJECT_TYPES_INFO } from './constants'
 
   const { data: page } = await useAsyncData('projects-page', () => {
     return queryCollection('pages').path('/projects').first()
@@ -32,10 +33,7 @@
 </script>
 
 <template>
-  <div
-v-if="page"
-class="min-h-screen"
->
+  <div v-if="page" class="min-h-screen">
     <div class="relative py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl lg:mx-0">
@@ -48,19 +46,13 @@ class="min-h-screen"
             {{ page.description }}
           </p>
           <div class="mt-6 flex items-center gap-x-6">
-            <div
-v-if="page.links"
-class="flex items-center gap-2"
->
+            <div v-if="page.links" class="flex items-center gap-2">
               <UButton
                 :label="page.links[0]?.label"
                 :to="global.meetingLink"
                 v-bind="page.links[0]"
               />
-              <UButton
-:to="`mailto:${global.email}`"
-v-bind="page.links[1]"
-/>
+              <UButton :to="`mailto:${global.email}`" v-bind="page.links[1]" />
             </div>
           </div>
         </div>
@@ -88,6 +80,16 @@ v-bind="page.links[1]"
                     <span class="text-sm text-muted">
                       {{ dayjs(project.date).format('YYYY') }}
                     </span>
+                    <UBadge
+                      v-if="
+                        (project as any).type &&
+                        PROJECT_TYPES_INFO[(project as any).type]
+                      "
+                      :color="PROJECT_TYPES_INFO[(project as any).type]?.color"
+                      variant="outline"
+                    >
+                      {{ PROJECT_TYPES_INFO[(project as any).type]?.label }}
+                    </UBadge>
                   </div>
                   <h2
                     class="text-base font-semibold text-gray-900 dark:text-white mb-2"
@@ -149,7 +151,7 @@ v-bind="page.links[1]"
                     :src="project.image"
                     :alt="project.title"
                     class="object-cover w-full h-48 rounded-lg shadow-lg"
-                  >
+                  />
                 </div>
               </div>
             </div>
