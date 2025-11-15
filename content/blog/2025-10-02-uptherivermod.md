@@ -1,7 +1,7 @@
 ---
 title: Cookin' Granny
 description: This is a placeholder project. Content will be added later.
-date: 2025-1-15
+date: 2025-10-02
 image: /img/logo.jpg
 minRead: 5
 author:
