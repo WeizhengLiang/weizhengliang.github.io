@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  // Removed unused import
+  import { PROJECT_TYPES_INFO } from './constants'
 
   const route = useRoute()
 
@@ -79,11 +79,22 @@ class="text-sm flex items-center gap-1 mb-8"
 
         <div class="flex flex-col gap-3">
           <div
-            class="flex text-xs text-muted items-center justify-center gap-2"
+            class="flex text-xs text-muted items-center justify-center gap-2 flex-wrap"
           >
             <span v-if="page?.date">
               {{ formatDate(page.date) }}
             </span>
+            <template v-if="page?.type">
+              <UBadge
+                v-for="projectType in (Array.isArray(page.type) ? page.type : [page.type]).filter(t => PROJECT_TYPES_INFO[t])"
+                :key="projectType"
+                :color="PROJECT_TYPES_INFO[projectType]?.color"
+                variant="outline"
+                size="sm"
+              >
+                {{ PROJECT_TYPES_INFO[projectType]?.label }}
+              </UBadge>
+            </template>
           </div>
           <img
             :src="page?.image"
@@ -96,6 +107,17 @@ class="text-sm flex items-center gap-1 mb-8"
           <p class="text-muted text-center max-w-2xl mx-auto">
             {{ page.description }}
           </p>
+          <div v-if="page.tags && page.tags.length > 0" class="flex flex-wrap gap-2 justify-center mt-4">
+            <UBadge
+              v-for="tag in page.tags"
+              :key="tag"
+              color="neutral"
+              variant="soft"
+              size="sm"
+            >
+              {{ tag }}
+            </UBadge>
+          </div>
         </div>
 
         <div class="max-w-3xl mx-auto mt-12">

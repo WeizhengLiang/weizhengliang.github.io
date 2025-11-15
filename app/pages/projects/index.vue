@@ -80,16 +80,16 @@
                     <span class="text-sm text-muted">
                       {{ dayjs(project.date).format('YYYY') }}
                     </span>
-                    <UBadge
-                      v-if="
-                        (project as any).type &&
-                        PROJECT_TYPES_INFO[(project as any).type]
-                      "
-                      :color="PROJECT_TYPES_INFO[(project as any).type]?.color"
-                      variant="outline"
-                    >
-                      {{ PROJECT_TYPES_INFO[(project as any).type]?.label }}
-                    </UBadge>
+                    <template v-if="(project as any).type">
+                      <UBadge
+                        v-for="projectType in (Array.isArray((project as any).type) ? (project as any).type : [(project as any).type]).filter(t => PROJECT_TYPES_INFO[t])"
+                        :key="projectType"
+                        :color="PROJECT_TYPES_INFO[projectType]?.color"
+                        variant="outline"
+                      >
+                        {{ PROJECT_TYPES_INFO[projectType]?.label }}
+                      </UBadge>
+                    </template>
                   </div>
                   <h2
                     class="text-base font-semibold text-gray-900 dark:text-white mb-2"
@@ -98,6 +98,18 @@
                   </h2>
                   <div class="text-gray-500 dark:text-gray-300 mb-4 text-sm">
                     {{ project.description }}
+                  </div>
+
+                  <div v-if="project.tags && project.tags.length > 0" class="flex flex-wrap gap-2 mb-4">
+                    <UBadge
+                      v-for="tag in project.tags"
+                      :key="tag"
+                      color="neutral"
+                      variant="soft"
+                      size="sm"
+                    >
+                      {{ tag }}
+                    </UBadge>
                   </div>
 
                   <div class="flex justify-between">

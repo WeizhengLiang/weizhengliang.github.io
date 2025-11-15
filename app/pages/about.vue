@@ -31,7 +31,7 @@
     },
     {
       date: 'February, 2024',
-      title: 'Shanghai Zhanxun Network Technology',
+      title: 'Shanghai Bamboo Internet & Information Service Co., Ltd',
       description: 'Software Engineer Intern',
       icon: 'i-lucide-gamepad-2'
     },
@@ -46,7 +46,7 @@
   const { footer } = useAppConfig()
 
   const openResume = () => {
-    window.open('/file/resume.pdf', '_blank')
+    window.open('/file/WEIZHENG LIANG RESUME.pdf', '_blank')
   }
 </script>
 

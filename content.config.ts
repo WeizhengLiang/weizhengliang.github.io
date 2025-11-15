@@ -97,7 +97,10 @@ export default defineContentConfig({
         date: z.date(),
         code: z.string().url().optional(),
         alive: z.string().url().optional(),
-        type: z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT']).optional()
+        type: z.union([
+          z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT', 'GAME_DESIGN', 'PROGRAMMING', 'TECH_DESIGN', 'PRODUCTION', 'SOLO']),
+          z.array(z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT', 'GAME_DESIGN', 'PROGRAMMING', 'TECH_DESIGN', 'PRODUCTION', 'SOLO']))
+        ]).optional()
       })
     }),
     blog: defineCollection({

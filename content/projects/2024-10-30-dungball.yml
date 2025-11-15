@@ -1,9 +1,9 @@
 title: Dungball Domination
 description: After your beloved dung ball being trampled by a farmer, your mission is to contaminate the farm to take revenge on the farmer!
 image: /img/coverage.gif
-url: '/blog/2024-8-21-dungball'
+url: '/blog/2024-10-30-dungball'
 code: 'https://github.com/minnnpan/ShiKeLang'
 alive: 'https://ldjam.com/events/ludum-dare/56/dungball-domination'
-tags: ['C+', 'Unity']
-date: '2024-8'
-type: 'SIDE_PROJECT'
+tags: ['C#', 'Unity']
+date: '2024-10'
+type: ['GAME_DESIGN', 'PROGRAMMING', 'TECHNICAL_DESIGN']
