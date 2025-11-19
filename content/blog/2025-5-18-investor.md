@@ -11,19 +11,19 @@ author:
     alt: Weizheng Liang
 ---
 
-<div class="grid grid-cols-2 sm:grid-cols-1 gap-4 mb-8">
-  <div class="bg-blue-50 rounded-lg p-4">
+<div class="project-info-grid">
+  <div class="project-info-item">
     <strong>Link</strong><br>
      <a href="https://play.unity.com/en/games/a0472e61-4ee9-45c1-a307-1ea9ac62a5e8/inner-investor" target="_blank" class="text-blue-600">
       Inner Investor
     </a>
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Tool</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Tool</strong><br>
     C+  &nbsp;  Unity  &nbsp;  Figma  &nbsp;  Adobe Illustrator
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Role</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Role</strong><br>
     <div class="grid grid-cols-2 sm:grid-cols-1 gap-x-2">
         <div>Game Design</div>
         <div>Programming</div>
@@ -32,8 +32,8 @@ author:
         <div>Writing & Narrative</div>
     </div>
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Genre</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Genre</strong><br>
     <div class="grid grid-cols-1 gap-x-2">
         <div>Emotion System Design</div>
         <div>Behavioral Economics Game</div>

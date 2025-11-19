@@ -11,23 +11,23 @@ author:
     alt: Weizheng Liang
 ---
 
-<div class="grid grid-cols-2 gap-4 mb-8">
-  <div class="bg-blue-50 rounded-lg p-4">
+<div class="project-info-grid">
+  <div class="project-info-item">
     <strong>Link</strong><br>
      <a href="#" target="_blank" class="text-blue-600">
       Project Link (To be added)
     </a>
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Tool</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Tool</strong><br>
     Placeholder  &nbsp;  Coming Soon 
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Role</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Role</strong><br>
     To be determined
   </div>
-  <div class="bg-blue-50 rounded-lg p-4">
-    <strong>Genre</strong><br>
+  <div class="project-info-item">
+    <strong class="project-info-label">Genre</strong><br>
     To be determined
   </div>
 </div>
