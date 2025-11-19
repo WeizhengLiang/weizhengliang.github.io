@@ -9,6 +9,7 @@ author:
   avatar:
     src: /img/profile.png
     alt: Weizheng Liang
+draft: true
 ---
 
 <div class="project-info-grid">

@@ -5,4 +5,5 @@ url: '/blog/2025-12-05-agt'
 tags: ['Unity', 'TouchDesigner', Tools]
 date: '2025-12'
 type: ['ONGOING', 'PROGRAMMING', 'TECHNICAL_DESIGN']
+draft: true
 

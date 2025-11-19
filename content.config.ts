@@ -100,7 +100,8 @@ export default defineContentConfig({
         type: z.union([
           z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT', 'GAME_DESIGN', 'PROGRAMMING', 'TECH_DESIGN', 'PRODUCTION', 'SOLO']),
           z.array(z.enum(['RECENT', 'ONGOING', 'SIDE_PROJECT', 'GAME_DESIGN', 'PROGRAMMING', 'TECH_DESIGN', 'PRODUCTION', 'SOLO']))
-        ]).optional()
+        ]).optional(),
+        draft: z.boolean().optional()
       })
     }),
     blog: defineCollection({
@@ -112,7 +113,8 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
-        author: createAuthorSchema()
+        author: createAuthorSchema(),
+        draft: z.boolean().optional()
       })
     }),
     pages: defineCollection({

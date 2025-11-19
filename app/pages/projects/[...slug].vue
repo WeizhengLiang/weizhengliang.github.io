@@ -10,17 +10,22 @@
     return path.endsWith('/') ? path.slice(0, -1) : path
   })
 
-  const { data: page } = await useAsyncData(normalizedPath.value, () => {
+  const { data: page } = await useAsyncData(normalizedPath.value, async () => {
     // Try without trailing slash first, then with trailing slash as fallback
     const pathWithoutSlash = normalizedPath.value
     const pathWithSlash = normalizedPath.value + '/'
 
     // First try without trailing slash
-    const result = queryCollection('projects').path(pathWithoutSlash).first()
-    if (result) return result
+    let result = queryCollection('projects').path(pathWithoutSlash).first()
+    result = result instanceof Promise ? await result : result
+    if (result && !(result as any)?.draft) return result
 
     // Fallback: try with trailing slash
-    return queryCollection('projects').path(pathWithSlash).first()
+    let resultWithSlash = queryCollection('projects').path(pathWithSlash).first()
+    resultWithSlash = resultWithSlash instanceof Promise ? await resultWithSlash : resultWithSlash
+    if (resultWithSlash && !(resultWithSlash as any)?.draft) return resultWithSlash
+
+    return null
   })
 
   if (!page.value)

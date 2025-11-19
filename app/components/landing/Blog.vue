@@ -5,9 +5,10 @@
     page: IndexCollectionItem
   }>()
 
-  const { data: posts } = await useAsyncData('index-blogs', () =>
-    queryCollection('blog').order('date', 'DESC').limit(3).all()
-  )
+  const { data: posts } = await useAsyncData('index-blogs', async () => {
+    const all = await queryCollection('blog').order('date', 'DESC').all()
+    return all.filter(post => !post.draft).slice(0, 3)
+  })
   if (!posts.value) {
     throw createError({
       statusCode: 404,

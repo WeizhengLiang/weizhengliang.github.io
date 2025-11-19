@@ -5,4 +5,4 @@ url: '/blog/2025-11-19-primeengine'
 tags: ['Engine Architecture', 'Computer Graphics', C++]
 date: '2025-11'
 type: ['ONGOING', 'PROGRAMMING', 'TECHNICAL_DESIGN']
-
+draft: true

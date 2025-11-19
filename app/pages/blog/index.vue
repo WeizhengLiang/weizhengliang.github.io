@@ -9,9 +9,10 @@
       fatal: true
     })
   }
-  const { data: posts } = await useAsyncData('blogs', () =>
-    queryCollection('blog').order('date', 'DESC').all()
-  )
+  const { data: posts } = await useAsyncData('blogs', async () => {
+    const all = await queryCollection('blog').order('date', 'DESC').all()
+    return all.filter(post => !post.draft)
+  })
   if (!posts.value) {
     throw createError({
       statusCode: 404,

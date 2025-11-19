@@ -15,7 +15,8 @@
 
   const { data: projects } = await useAsyncData('projects', async () => {
     const all = await queryCollection('projects').all()
-    return all.sort((a, b) => {
+    const published = all.filter(project => !project.draft)
+    return published.sort((a, b) => {
       const dateA = dayjs(a.date)
       const dateB = dayjs(b.date)
       return dateB.valueOf() - dateA.valueOf()
